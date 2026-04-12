@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <rect width="800" height="1000" fill="#FF2D2D"/>
+  <!-- Price tag shapes -->
+  <polygon points="200,150 600,150 650,300 600,450 200,450 150,300" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+  <polygon points="220,170 580,170 625,300 580,430 220,430 175,300" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <!-- Price tag circle (hole) -->
+  <circle cx="400" cy="300" r="30" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <!-- ₹ symbol -->
+  <text x="400" y="315" font-family="Georgia, serif" font-size="36" fill="rgba(255,255,255,0.25)" text-anchor="middle">₹</text>
+  <!-- Lines for price tag text -->
+  <rect x="260" y="340" width="200" height="6" rx="3" fill="rgba(255,255,255,0.2)"/>
+  <rect x="300" y="358" width="120" height="4" rx="2" fill="rgba(255,255,255,0.15)"/>
+  <!-- Arrow down (price drop visual) -->
+  <line x1="400" y1="490" x2="400" y2="580" stroke="white" stroke-width="3"/>
+  <polygon points="390,570 400,595 410,570" fill="white"/>
+  <!-- Big text -->
+  <text x="80" y="680" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="white">The Price</text>
+  <text x="80" y="745" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="white">Was Never</text>
+  <text x="80" y="810" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="black">the Problem.</text>
+  <rect x="80" y="840" width="640" height="2" fill="rgba(0,0,0,0.3)"/>
+  <text x="80" y="890" font-family="Arial, sans-serif" font-size="13" fill="rgba(0,0,0,0.5)" letter-spacing="2">WHAT A KIRANA OWNER TAUGHT ME ABOUT PREMIUM</text>
+  <text x="80" y="950" font-family="Arial, sans-serif" font-size="11" fill="rgba(0,0,0,0.4)" letter-spacing="3">NAARITIVE · CLIENT DIARIES</text>
+</svg>

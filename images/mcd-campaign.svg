@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <rect width="800" height="1000" fill="#FF2D2D"/>
+  <rect x="0" y="0" width="800" height="1000" fill="url(#noise)" opacity="0.04"/>
+  <defs>
+    <filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/></filter>
+  </defs>
+  <!-- Empty fries box (day) -->
+  <g transform="translate(200, 200)">
+    <rect x="0" y="60" width="200" height="280" rx="8" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="3"/>
+    <rect x="20" y="0" width="160" height="80" rx="4" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="3"/>
+    <text x="100" y="45" font-family="Georgia, serif" font-size="11" fill="rgba(255,255,255,0.4)" text-anchor="middle" letter-spacing="4">DAYTIME</text>
+    <text x="100" y="220" font-family="Georgia, serif" font-size="11" fill="rgba(255,255,255,0.3)" text-anchor="middle" letter-spacing="2">empty</text>
+  </g>
+  <!-- Arrow -->
+  <text x="400" y="420" font-family="Georgia, serif" font-size="48" fill="rgba(255,255,255,0.4)" text-anchor="middle">→</text>
+  <!-- Full fries box (night) -->
+  <g transform="translate(400, 200)">
+    <rect x="0" y="60" width="200" height="280" rx="8" fill="none" stroke="white" stroke-width="3"/>
+    <rect x="20" y="0" width="160" height="80" rx="4" fill="none" stroke="white" stroke-width="3"/>
+    <!-- Fries -->
+    <rect x="60" y="-60" width="12" height="130" rx="4" fill="white"/>
+    <rect x="80" y="-80" width="12" height="150" rx="4" fill="white"/>
+    <rect x="100" y="-50" width="12" height="120" rx="4" fill="white"/>
+    <rect x="120" y="-70" width="12" height="140" rx="4" fill="white"/>
+    <rect x="140" y="-40" width="12" height="110" rx="4" fill="white"/>
+    <text x="100" y="45" font-family="Georgia, serif" font-size="11" fill="white" text-anchor="middle" letter-spacing="4">IFTAR</text>
+  </g>
+  <!-- Label -->
+  <text x="400" y="600" font-family="Georgia, serif" font-size="11" fill="rgba(255,255,255,0.5)" text-anchor="middle" letter-spacing="6">McDONALD'S · RAMADAN · GERMANY</text>
+  <!-- Big text -->
+  <text x="400" y="720" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="white" text-anchor="middle">Silence</text>
+  <text x="400" y="790" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="white" text-anchor="middle">is a</text>
+  <text x="400" y="860" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="rgba(255,182,193,0.9)" text-anchor="middle">Strategy.</text>
+  <!-- Bottom tag -->
+  <rect x="280" y="920" width="240" height="40" rx="2" fill="black"/>
+  <text x="400" y="946" font-family="Arial, sans-serif" font-size="11" fill="#FF1493" text-anchor="middle" letter-spacing="4">NAARITIVE ADVISORY</text>
+</svg>

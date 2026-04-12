@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <rect width="800" height="1000" fill="#0A0A0A"/>
+  <!-- Background bars -->
+  <rect x="0" y="0" width="400" height="1000" fill="#111"/>
+  <!-- Pink accent -->
+  <rect x="0" y="0" width="4" height="1000" fill="#FF1493"/>
+  <!-- Clock graphic -->
+  <circle cx="400" cy="300" r="150" fill="none" stroke="#222" stroke-width="2"/>
+  <circle cx="400" cy="300" r="140" fill="none" stroke="#FF2D2D" stroke-width="3" stroke-dasharray="220 660" stroke-dashoffset="0"/>
+  <circle cx="400" cy="300" r="8" fill="#FF2D2D"/>
+  <!-- Clock hands -->
+  <line x1="400" y1="300" x2="400" y2="200" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <line x1="400" y1="300" x2="460" y2="320" stroke="#FF2D2D" stroke-width="4" stroke-linecap="round"/>
+  <!-- Time label -->
+  <text x="400" y="370" font-family="Arial, sans-serif" font-size="13" fill="rgba(255,255,255,0.4)" text-anchor="middle" letter-spacing="4">40 MINUTES</text>
+  <!-- Big text -->
+  <text x="80" y="560" font-family="Georgia, serif" font-size="58" font-weight="bold" fill="white">Speed</text>
+  <text x="80" y="630" font-family="Georgia, serif" font-size="58" font-weight="bold" fill="white">meets</text>
+  <text x="80" y="700" font-family="Georgia, serif" font-size="58" font-weight="bold" fill="#FF2D2D">Choice.</text>
+  <!-- Sub -->
+  <text x="80" y="780" font-family="Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.5)" letter-spacing="1">Quick commerce is no longer</text>
+  <text x="80" y="810" font-family="Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.5)" letter-spacing="1">just about speed.</text>
+  <!-- Stat -->
+  <rect x="80" y="850" width="300" height="2" fill="#FF1493"/>
+  <text x="80" y="900" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.4)" letter-spacing="3">$5-6B MARKET · INDIA · 2026</text>
+  <!-- Bottom tag -->
+  <rect x="560" y="940" width="200" height="36" rx="2" fill="#FF2D2D"/>
+  <text x="660" y="963" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle" letter-spacing="3">NAARITIVE</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <rect width="800" height="1000" fill="#0A0A0A"/>
+  <!-- Grid lines -->
+  <line x1="0" y1="250" x2="800" y2="250" stroke="#1A1A1A" stroke-width="1"/>
+  <line x1="0" y1="500" x2="800" y2="500" stroke="#1A1A1A" stroke-width="1"/>
+  <line x1="0" y1="750" x2="800" y2="750" stroke="#1A1A1A" stroke-width="1"/>
+  <line x1="200" y1="0" x2="200" y2="1000" stroke="#1A1A1A" stroke-width="1"/>
+  <line x1="400" y1="0" x2="400" y2="1000" stroke="#1A1A1A" stroke-width="1"/>
+  <line x1="600" y1="0" x2="600" y2="1000" stroke="#1A1A1A" stroke-width="1"/>
+  <!-- Red accent block -->
+  <rect x="0" y="0" width="800" height="8" fill="#FF2D2D"/>
+  <!-- Map pin -->
+  <circle cx="400" cy="380" r="80" fill="none" stroke="#FF2D2D" stroke-width="3"/>
+  <circle cx="400" cy="380" r="20" fill="#FF2D2D"/>
+  <line x1="400" y1="460" x2="400" y2="540" stroke="#FF2D2D" stroke-width="3"/>
+  <!-- Dots for cities -->
+  <circle cx="260" cy="500" r="8" fill="#FF1493"/>
+  <text x="260" y="530" font-family="Arial, sans-serif" font-size="13" fill="rgba(255,255,255,0.6)" text-anchor="middle" letter-spacing="2">SOLAPUR</text>
+  <circle cx="540" cy="440" r="8" fill="#FF1493"/>
+  <text x="540" y="470" font-family="Arial, sans-serif" font-size="13" fill="rgba(255,255,255,0.6)" text-anchor="middle" letter-spacing="2">LATUR</text>
+  <!-- Line between -->
+  <line x1="268" y1="500" x2="532" y2="440" stroke="rgba(255,20,147,0.3)" stroke-width="1" stroke-dasharray="6,4"/>
+  <!-- Text -->
+  <text x="400" y="660" font-family="Georgia, serif" font-size="44" font-weight="bold" fill="white" text-anchor="middle">Field.</text>
+  <text x="400" y="720" font-family="Georgia, serif" font-size="44" font-weight="bold" fill="white" text-anchor="middle">Not</text>
+  <text x="400" y="780" font-family="Georgia, serif" font-size="44" font-weight="bold" fill="#FF2D2D" text-anchor="middle">Office.</text>
+  <text x="400" y="860" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.4)" text-anchor="middle" letter-spacing="3">HYPERLOCAL MARKET IMMERSION</text>
+  <!-- Bottom tag -->
+  <rect x="280" y="920" width="240" height="40" rx="2" fill="#FF2D2D"/>
+  <text x="400" y="946" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle" letter-spacing="4">NAARITIVE ADVISORY</text>
+</svg>

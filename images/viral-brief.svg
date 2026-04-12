@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <rect width="800" height="1000" fill="#0A0A0A"/>
+  <rect x="0" y="0" width="800" height="5" fill="#FF1493"/>
+  <!-- Document lines -->
+  <rect x="160" y="120" width="480" height="600" rx="4" fill="#111" stroke="#1E1E1E" stroke-width="1"/>
+  <rect x="180" y="160" width="200" height="12" rx="2" fill="#222"/>
+  <rect x="180" y="185" width="320" height="8" rx="2" fill="#1A1A1A"/>
+  <rect x="180" y="205" width="280" height="8" rx="2" fill="#1A1A1A"/>
+  <rect x="180" y="225" width="300" height="8" rx="2" fill="#1A1A1A"/>
+  <!-- Red X through the brief -->
+  <line x1="160" y1="120" x2="640" y2="720" stroke="#FF2D2D" stroke-width="4" opacity="0.6"/>
+  <line x1="640" y1="120" x2="160" y2="720" stroke="#FF2D2D" stroke-width="4" opacity="0.6"/>
+  <!-- "MAKE IT VIRAL" stamp -->
+  <rect x="220" y="340" width="360" height="100" rx="4" fill="none" stroke="#FF2D2D" stroke-width="4" transform="rotate(-8 400 390)"/>
+  <text x="400" y="378" font-family="Arial Black, sans-serif" font-size="26" fill="#FF2D2D" text-anchor="middle" font-weight="900" transform="rotate(-8 400 390)" letter-spacing="2">MAKE IT VIRAL</text>
+  <text x="400" y="412" font-family="Arial, sans-serif" font-size="11" fill="#FF2D2D" text-anchor="middle" transform="rotate(-8 400 390)" letter-spacing="3">CLIENT INSTRUCTION #1</text>
+  <!-- Bottom text -->
+  <text x="400" y="810" font-family="Georgia, serif" font-size="36" font-weight="bold" fill="white" text-anchor="middle">"Just make it</text>
+  <text x="400" y="860" font-family="Georgia, serif" font-size="36" font-weight="bold" fill="#FF1493" text-anchor="middle">go viral."</text>
+  <text x="400" y="920" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.3)" text-anchor="middle" letter-spacing="3">NAARITIVE · CLIENT DIARIES</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#1A0505"/>
+  <circle cx="400" cy="220" r="140" fill="none" stroke="#FF2D2D" stroke-width="1" opacity="0.2"/>
+  <circle cx="400" cy="220" r="100" fill="#200A0A" stroke="#FF2D2D" stroke-width="0.8" opacity="0.3"/>
+  <circle cx="400" cy="220" r="65" fill="#2A0F0F"/>
+  <path d="M360 215 Q375 200 395 210 Q415 220 430 205" stroke="#FF2D2D" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M355 232 Q372 218 393 228 Q414 238 432 222" stroke="#FF2D2D" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
+  <text x="400" y="340" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#FF2D2D" letter-spacing="5">NESCAFÉ JAPAN</text>
+  <text x="400" y="365" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#444" letter-spacing="3">BUILDING MEMORY, NOT HABIT</text>
+  <rect x="0" y="490" width="800" height="4" fill="#FF2D2D" opacity="0.4"/>
+</svg>
