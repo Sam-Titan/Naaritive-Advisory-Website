@@ -52,6 +52,11 @@
       color: var(--white);
       letter-spacing: 2px;
     }
+    .logo-img {
+      height: 60px;
+      width: auto;
+      object-fit: contain;
+    }
     .nav-logo .tive {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 26px;
@@ -99,7 +104,7 @@
     /* ===== HERO ===== */
     #home {
       min-height: 100vh;
-      background: var(--red);
+      background: var(--black);
       display: flex; flex-direction: column;
       justify-content: center;
       padding: 100px 48px 80px;
@@ -863,7 +868,6 @@
       padding: 64px 48px 48px;
       border-bottom: 1px solid #141414;
     }
-    .footer-brand {}
     .footer-brand-logo {
       display: flex; align-items: baseline; gap: 2px;
       margin-bottom: 16px;
@@ -1047,8 +1051,7 @@
 <!-- NAV -->
 <nav>
   <a href="#home" class="nav-logo">
-    <span class="naari">Naari</span><span class="tive">tive</span>
-    <span class="advisory-tag">Advisory</span>
+    <img src="images/3.png" alt="Naaritive Logo" class="logo-img">
   </a>
   <ul class="nav-links">
     <li><a href="#blog">Writing</a></li>
@@ -1398,8 +1401,7 @@
     <!-- Brand col -->
     <div class="footer-brand">
       <div class="footer-brand-logo">
-        <span class="naari">Naari</span><span class="tive">tive</span>
-        <span class="advisory-tag">Advisory</span>
+        <img src="images/3.png" alt="Naaritive Logo" class="logo-img">
       </div>
       <p class="footer-tagline">Sharp, honest thinking about brands, audiences, and the stories that actually stick.</p>
     </div>
