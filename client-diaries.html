@@ -11,7 +11,8 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --red: #FF2D2D; --red-dark: #CC1A1A; --black: #0A0A0A; --white: #FFFFFF;
-      --pink: #FF1493; --pink-lt: #FFB6C1; --gray: #F5F5F5; --gray-mid: #E0E0E0;
+      --pink: #FF1493; --pink-lt: #FFB6C1; --pink-mid: #E8547A;
+      --gray: #F5F5F5; --gray-mid: #E0E0E0;
       --text: #1A1A1A; --text-muted: #666666;
     }
     html { scroll-behavior: smooth; }
@@ -21,20 +22,14 @@
 
     /* NAV */
     nav { background: var(--black); display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 64px; border-bottom: 2px solid var(--red); }
-    .nav-logo { display: flex; align-items: baseline; gap: 2px; }
-    .nav-logo .naari { font-family: 'Bebas Neue', sans-serif; font-size: 26px; color: var(--white); letter-spacing: 2px; }
-    .nav-logo .tive { font-family: 'Bebas Neue', sans-serif; font-size: 26px; background: linear-gradient(135deg, #FF1493, #FFB6C1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: 2px; }
-    .nav-logo .advisory-tag { margin-left: 8px; background: var(--red); color: var(--white); font-size: 9px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 2px 7px; border-radius: 2px; }
+    .nav-logo { display: flex; align-items: center; }
+    .logo-img { height: 52px; width: auto; object-fit: contain; }
     .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
     .nav-links a { font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #AAAAAA; transition: color 0.2s; }
     .nav-links a:hover { color: var(--white); }
     .nav-links .nav-cta { background: var(--red); color: var(--white) !important; padding: 8px 20px; border-radius: 2px; }
-    .logo-img {
-      height: 60px;
-      width: auto;
-      object-fit: contain;
-    }
-    /* PAGE HERO — pink theme for diaries */
+
+    /* PAGE HERO */
     .page-hero {
       background: var(--black); padding: 80px 48px 64px;
       border-bottom: 1px solid #1A1A1A; position: relative; overflow: hidden;
@@ -56,10 +51,7 @@
 
     /* POSTS */
     .posts-wrap { padding: 0 48px 80px; }
-    .post-card {
-      display: grid; grid-template-columns: 1fr 380px; gap: 0;
-      border-top: 1px solid var(--gray-mid); padding: 48px 0; cursor: pointer;
-    }
+    .post-card { display: grid; grid-template-columns: 1fr 380px; gap: 0; border-top: 1px solid var(--gray-mid); padding: 48px 0; cursor: pointer; }
     .post-card:last-child { border-bottom: 1px solid var(--gray-mid); }
     .post-card-left { padding-right: 60px; display: flex; flex-direction: column; justify-content: space-between; }
     .post-card-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
@@ -78,10 +70,7 @@
     .post-img-placeholder { width: 100%; height: 100%; min-height: 240px; display: flex; align-items: center; justify-content: center; font-family: 'Bebas Neue', sans-serif; font-size: 80px; color: var(--gray-mid); background: linear-gradient(135deg, #f0f0f0, #e0e0e0); }
 
     /* CALLOUT STRIP */
-    .callout-strip {
-      background: var(--pink); padding: 40px 48px;
-      display: flex; align-items: center; justify-content: space-between; gap: 32px;
-    }
+    .callout-strip { background: var(--pink); padding: 40px 48px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
     .callout-text h3 { font-family: 'Playfair Display', serif; font-size: 26px; color: var(--white); margin-bottom: 8px; }
     .callout-text p { font-size: 14px; color: rgba(255,255,255,0.8); max-width: 480px; }
     .btn-callout { white-space: nowrap; background: var(--white); color: var(--pink); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 14px 28px; border-radius: 2px; transition: all 0.2s; }
@@ -90,7 +79,33 @@
     /* ARTICLE OVERLAY */
     #article-overlay { display: none; position: fixed; inset: 0; z-index: 2000; background: var(--white); overflow-y: auto; }
     #article-overlay.open { display: block; }
-    .article-nav { position: sticky; top: 0; background: var(--white); border-bottom: 1px solid var(--gray-mid); padding: 20px 48px; display: flex; align-items: center; justify-content: space-between; z-index: 100; }
+    .article-nav {
+      position: sticky; top: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-mid);
+      padding: 20px 48px;
+      display: flex; align-items: center; justify-content: space-between;
+      z-index: 100;
+    }
+    /* Fix: logo visible on white overlay background */
+    .overlay-logo {
+      display: flex; align-items: center;
+    }
+    .overlay-logo .naari {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      color: var(--black);
+      letter-spacing: 2px;
+    }
+    .overlay-logo .tive {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      background: linear-gradient(135deg, var(--pink), var(--pink-mid));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 2px;
+    }
     .article-back { font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--pink); cursor: pointer; display: flex; align-items: center; gap: 8px; }
     .article-body-wrap { max-width: 740px; margin: 0 auto; padding: 64px 48px 100px; }
     .article-tag { font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; background: var(--pink); color: var(--white); padding: 4px 10px; border-radius: 1px; display: inline-block; margin-bottom: 20px; }
@@ -99,7 +114,7 @@
     .article-content { font-size: 17px; line-height: 1.85; color: #2A2A2A; white-space: pre-wrap; }
 
     /* FOOTER */
-    footer { background: var(--black); padding: 40px 48px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #1A1A1A; }
+    footer { background: var(--black); padding: 32px 48px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #1A1A1A; }
     .footer-copy { font-size: 12px; color: #555; letter-spacing: 1px; }
 
     @media (max-width: 900px) {
@@ -108,20 +123,15 @@
       .post-card-right { min-height: 200px; }
       .post-card-left { padding-right: 0; }
       .callout-strip { flex-direction: column; }
+      .article-nav { padding: 16px 24px; }
+      .article-body-wrap { padding: 40px 24px 80px; }
+      footer { flex-direction: column; gap: 12px; text-align: center; }
     }
     @media (max-width: 768px) {
-  .nav-links {
-      gap: 16px;
+      .nav-links { gap: 16px; }
+      .nav-links a { font-size: 10px; }
+      .nav-links .nav-cta { padding: 6px 12px; }
     }
-
-    .nav-links a {
-      font-size: 10px;
-    }
-
-    .nav-links .nav-cta {
-      padding: 6px 12px;
-    }
-  }
   </style>
 </head>
 <body>
@@ -143,7 +153,7 @@
   <p class="page-eyebrow">On the Ground</p>
   <h1 class="page-title">Client <em>Diaries</em></h1>
   <p class="page-sub">Raw, honest stories from inside real consulting engagements. The moments strategy decks never capture — the kirana conversations, the market walks, the briefs that fell apart and the ones that didn't.</p>
-  <p class="page-count"><span id="diary-count">3</span> entries</p>
+  <p class="page-count"><span id="diary-count">5</span> entries</p>
 </div>
 
 <div class="posts-wrap">
@@ -169,7 +179,9 @@
 <div id="article-overlay">
   <div class="article-nav">
     <span class="article-back" onclick="closeArticle()">← Back to Diaries</span>
-    <div class="nav-logo"><span class="naari">Naari</span><span class="tive">tive</span></div>
+    <div class="overlay-logo">
+      <span class="naari">Naari</span><span class="tive">tive</span>
+    </div>
   </div>
   <div class="article-body-wrap">
     <span class="article-tag" id="art-tag"></span>
@@ -181,60 +193,19 @@
 
 <script>
   const DIARIES = [
-    {
-      id: 'field-visit-latur',
-      title: "What 4 Days in Latur & Solapur Taught Me About Marketing",
-      tag: "Client Diaries",
-      date: "2026-04-01",
-      image: "images/latur-solapur.svg",
-      excerpt: "I was working with an FMCG brand operating in Latur and Solapur. Unlike most consultants, I asked if I could visit the markets with them. They said yes. I flew the same weekend.",
-      content: `Lately, I've been working with an FMCG brand as a marketing consultant, currently operating in Latur and Solapur. Their approach is deeply hyperlocal — not just to build a loyal customer base, but to create meaningful livelihood opportunities for local women farmers.\n\nSo, unlike your average consultant, I asked if I could visit the markets of Solapur and Latur with them. At first, they were super surprised but did not express it so explicitly. They enthusiastically agreed and I flew the same weekend.\n\nFor four days, I was on the ground — speaking to customers, retailers, women farmers, NGO leaders, and distribution partners.\n\nObserving marketing in action is one thing; experiencing it in context is another. Somewhere between conversations in small kirana stores and chai breaks in village homes, insights turned into relationships.\n\nWe barely slept. We travelled through villages, explored local food, and brainstormed late into the night. For the team, this was familiar. For me, it was grounding. It reminded me that strategy looks very different when you're standing in the marketplace instead of an office.\n\nWhat stayed with me most was the purpose behind it all. A two-fold purpose: to do honest work, and to use my skills in a way that creates tangible impact.\n\nThis trip wasn't part of the deliverables. It wasn't in the scope of work. But I've never believed that marketing is just about five posts and three reels a month. I believe in immersion. In understanding the ethos of a brand. In ensuring marketing moves in sync with sales realities, distribution challenges, and real human behaviour.\n\nThere's still so much to learn — but experiences like these remind me why I chose to do this work in the first place.`
-    },
-    {
-      id: 'make-it-viral',
-      title: "When a Founder Told Me to 'Just Make It Go Viral'",
-      tag: "Client Diaries",
-      date: "2026-03-18",
-      image: "images/viral-brief.svg",
-      excerpt: "Three slides into the deck, the founder leaned back and said: 'Look, I just need this to go viral.' I've heard this before. But this time, I decided to say something I normally hold back.",
-      content: `Three slides into the discovery deck, the founder leaned back and said it.\n\n"Look, I just need this to go viral."\n\nI've been in enough rooms to know what this really means. It means: I need results fast. It means: I don't have the patience for slow brand building. It means: I've seen other brands blow up overnight and I want that.\n\nIt's a reasonable human desire. But it's the wrong brief.\n\nI put the deck down and asked one question: "What do you want to happen after it goes viral?"\n\nSilence.\n\nThat's usually where the real conversation begins.\n\nBecause virality without strategy is just a spike. A spike that brands celebrate in Week 1 and quietly forget about by Month 3 when the numbers have normalized and nothing has actually changed.\n\nThe brands that truly benefit from a viral moment are the ones where the viral content connects to something deeper — a clear positioning, a product that delivers, a community that has reason to stay.\n\nI spent the next hour asking this founder questions they hadn't been asked before. Who is your customer, really? What does a loyal customer look like for you? If you could only keep 100 customers forever, what would they have in common?\n\nBy the end of the session, the brief had completely changed.\n\nWe weren't making something viral. We were building a reason for the right people to care.\n\nThat's a harder, slower, more expensive road. But it's the only one that doesn't dead-end in six weeks.\n\nThe best marketing doesn't ask "how do we go viral?" It asks "what are we worth remembering for?"`
-    },
-    {
-      id: 'kirana-pricing-lesson',
-      title: "What a Kirana Owner Taught Me About Premium Pricing",
-      tag: "Client Diaries",
-      date: "2026-03-06",
-      image: "images/kirana-pricing.svg",
-      excerpt: "We were walking through a market in Solapur when I stopped at a kirana store to observe shelf placement. Ten minutes later, I'd completely rethought the pricing strategy I'd presented that morning.",
-      content: `We were about three hours into a market walk in Solapur when I stopped at a kirana store.\n\nI wasn't buying anything. I was just watching. How products were placed. Which ones the owner reached for first when a customer asked for "something for the kitchen." What price points made customers pause vs. reach without hesitation.\n\nI started talking to the owner — a man who had been running this store for 22 years. I asked him about one of the products we were consulting on. It sat on the shelf, premium-priced, in a clean package.\n\nHe looked at it for a moment and said: "Yeh toh dikhta accha hai. Par koi poochta nahin."\n\n(It looks nice. But nobody asks for it.)\n\nI asked him why. He shrugged. "Log jaante nahin kya karta hai. Aur itne mein toh doosra le lete hain."\n\n(People don't know what it does. And at this price, they'll just pick something else.)\n\nTwo sentences. And the entire pricing strategy I'd presented that morning fell apart in my head.\n\nWe had focused so hard on the premium packaging and the margin play that we forgot to answer the most basic question a kirana customer asks before they pick something up: Do I understand this? Do I trust this?\n\nPremium doesn't fail because of price. Premium fails because of unfamiliarity.\n\nThe fix wasn't to reduce the price. The fix was to earn the familiarity first — through smaller SKUs, through sampling, through building the habit before asking for the premium.\n\nI've read this in textbooks. But hearing it from a 22-year kirana owner, in the middle of a Solapur market, made it real in a way no case study ever has.\n\nSometimes the most expensive MBA you can get is a 10-minute conversation in the right shop.`
-    },
-    {
-      id: 'client-cac-lesson',
-      title: "The Client Who Left After We Improved Their Metrics",
-      tag: "Client Diaries",
-      date: "2025-11-01",
-      image: null,
-      excerpt: "I casually asked a new client why he switched from his previous agency to us. His answer changed how I think about client relationships entirely.",
-      content: `I casually asked a new client why he switched from his previous agency to us.\n\n"I just didn't feel the founder was involved anymore."\n\nIn our industry, it's almost a default path. You start small, build credibility, get traction. And then as you scale, you naturally start offloading. Founders move from execution to hiring, strategy, and client acquisition. The backend strengthens. The systems grow.\n\nBut somewhere in that process, the personal touch that once defined the relationship starts to fade. And clients notice.\n\nIt's not that they expect you to write every email or sit on every call. But they remember the person who pitched them. The person they trusted first. When that presence disappears entirely, it feels like something shifted.\n\nI've seen it play out in our own story too. We had a client where we delivered genuinely strong results — CAC dropped significantly, organic reach grew 15x in a month. By any dashboard measure, things were working.\n\nAnd yet, they moved on.\n\nBecause somewhere between the numbers getting better and the relationship getting bigger, the personal connection had thinned. The founder had stepped back. The team was doing great work — but the client missed the human being who had shown up with the original promise.\n\nSo now, even as Torchlight grows, I try to stay visible — not in the weeds, but present. I join the first few calls. I set expectations personally. I show up at milestones that matter.\n\nBecause at the end of the day, people don't do business with agencies. People do business with people.`
-    },
-    {
-      id: 'missed-targets-may',
-      title: "What Missed Targets in May Actually Taught Us",
-      tag: "Client Diaries",
-      date: "2025-07-05",
-      image: null,
-      excerpt: "We missed the targets in May. It was for a brand we manage on Amazon. And then, instead of pointing fingers, we did something different.",
-      content: `We missed the targets in May.\n\nIt was for a brand we manage on Amazon. We've all been there — when the end of the month rolls in and the numbers don't add up. Suddenly, looking at the dashboard feels heavier than ever.\n\nFor a moment, the old feeling crept in: frustration, doubt, the temptation to get stuck in what went wrong. Obviously, the blame game started.\n\nBut this time, we did something different.\n\nIf there's one thing experience has taught me, it's this: getting demotivated is the easiest step. Getting analytical is what actually matters.\n\nSo instead of staying lost in the loop, we got proactive.\n\nWe pulled up every bit of data — campaign reports, lead sources, client conversations. We sat as a team, asked uncomfortable questions, and dug for the root cause. We analysed every parameter, looked at deeper metrics like revenue share of each product instead of just revenue figures, and identified potential hero SKUs.\n\nIt wasn't about pointing fingers. It was about building a clear picture of what needed to change.\n\nBy June, the difference was obvious. We jumped to 2x of what we were doing previously.\n\nWith just small but focused changes in our strategy and execution, we emerged stronger as a team. And honestly? That turnaround felt better than any "perfect" month.\n\nThere's no playbook for how to bounce back — no one really teaches you that. The real win is using what you learn to come back stronger the next time.\n\nSo if you're staring at missed targets right now, don't let it stop you. Use it as fuel.`
-    }
+    { id:'field-visit-latur', title:"What 4 Days in Latur & Solapur Taught Me About Marketing", tag:"Client Diaries", date:"2026-04-01", image:"images/latur-solapur.svg", excerpt:"I was working with an FMCG brand operating in Latur and Solapur. Unlike most consultants, I asked if I could visit the markets with them. They said yes. I flew the same weekend.", content:`Lately, I've been working with an FMCG brand as a marketing consultant, currently operating in Latur and Solapur. Their approach is deeply hyperlocal — not just to build a loyal customer base, but to create meaningful livelihood opportunities for local women farmers.\n\nSo, unlike your average consultant, I asked if I could visit the markets of Solapur and Latur with them. At first, they were super surprised but did not express it so explicitly. They enthusiastically agreed and I flew the same weekend.\n\nFor four days, I was on the ground — speaking to customers, retailers, women farmers, NGO leaders, and distribution partners.\n\nObserving marketing in action is one thing; experiencing it in context is another. Somewhere between conversations in small kirana stores and chai breaks in village homes, insights turned into relationships.\n\nWe barely slept. We travelled through villages, explored local food, and brainstormed late into the night. For the team, this was familiar. For me, it was grounding. It reminded me that strategy looks very different when you're standing in the marketplace instead of an office.\n\nWhat stayed with me most was the purpose behind it all. A two-fold purpose: to do honest work, and to use my skills in a way that creates tangible impact.\n\nThis trip wasn't part of the deliverables. It wasn't in the scope of work. But I've never believed that marketing is just about five posts and three reels a month. I believe in immersion. In understanding the ethos of a brand. In ensuring marketing moves in sync with sales realities, distribution challenges, and real human behaviour.\n\nThere's still so much to learn — but experiences like these remind me why I chose to do this work in the first place.` },
+    { id:'make-it-viral', title:"When a Founder Told Me to 'Just Make It Go Viral'", tag:"Client Diaries", date:"2026-03-18", image:"images/viral-brief.svg", excerpt:"Three slides into the deck, the founder leaned back and said: 'Look, I just need this to go viral.' I've heard this before. But this time, I decided to say something I normally hold back.", content:`Three slides into the discovery deck, the founder leaned back and said it.\n\n"Look, I just need this to go viral."\n\nI've been in enough rooms to know what this really means. It means: I need results fast. It means: I don't have the patience for slow brand building. It means: I've seen other brands blow up overnight and I want that.\n\nIt's a reasonable human desire. But it's the wrong brief.\n\nI put the deck down and asked one question: "What do you want to happen after it goes viral?"\n\nSilence.\n\nThat's usually where the real conversation begins.\n\nBecause virality without strategy is just a spike. A spike that brands celebrate in Week 1 and quietly forget about by Month 3 when the numbers have normalized and nothing has actually changed.\n\nThe brands that truly benefit from a viral moment are the ones where the viral content connects to something deeper — a clear positioning, a product that delivers, a community that has reason to stay.\n\nI spent the next hour asking this founder questions they hadn't been asked before. Who is your customer, really? What does a loyal customer look like for you? If you could only keep 100 customers forever, what would they have in common?\n\nBy the end of the session, the brief had completely changed.\n\nWe weren't making something viral. We were building a reason for the right people to care.\n\nThat's a harder, slower, more expensive road. But it's the only one that doesn't dead-end in six weeks.\n\nThe best marketing doesn't ask "how do we go viral?" It asks "what are we worth remembering for?"` },
+    { id:'kirana-pricing-lesson', title:"What a Kirana Owner Taught Me About Premium Pricing", tag:"Client Diaries", date:"2026-03-06", image:"images/kirana-pricing.svg", excerpt:"We were walking through a market in Solapur when I stopped at a kirana store to observe shelf placement. Ten minutes later, I'd completely rethought the pricing strategy I'd presented that morning.", content:`We were about three hours into a market walk in Solapur when I stopped at a kirana store.\n\nI wasn't buying anything. I was just watching. How products were placed. Which ones the owner reached for first when a customer asked for "something for the kitchen." What price points made customers pause vs. reach without hesitation.\n\nI started talking to the owner — a man who had been running this store for 22 years. I asked him about one of the products we were consulting on. It sat on the shelf, premium-priced, in a clean package.\n\nHe looked at it for a moment and said: "Yeh toh dikhta accha hai. Par koi poochta nahin."\n\n(It looks nice. But nobody asks for it.)\n\nI asked him why. He shrugged. "Log jaante nahin kya karta hai. Aur itne mein toh doosra le lete hain."\n\n(People don't know what it does. And at this price, they'll just pick something else.)\n\nTwo sentences. And the entire pricing strategy I'd presented that morning fell apart in my head.\n\nWe had focused so hard on the premium packaging and the margin play that we forgot to answer the most basic question a kirana customer asks before they pick something up: Do I understand this? Do I trust this?\n\nPremium doesn't fail because of price. Premium fails because of unfamiliarity.\n\nThe fix wasn't to reduce the price. The fix was to earn the familiarity first — through smaller SKUs, through sampling, through building the habit before asking for the premium.\n\nI've read this in textbooks. But hearing it from a 22-year kirana owner, in the middle of a Solapur market, made it real in a way no case study ever has.\n\nSometimes the most expensive MBA you can get is a 10-minute conversation in the right shop.` },
+    { id:'client-cac-lesson', title:"The Client Who Left After We Improved Their Metrics", tag:"Client Diaries", date:"2025-11-01", image:null, excerpt:"I casually asked a new client why he switched from his previous agency to us. His answer changed how I think about client relationships entirely.", content:`I casually asked a new client why he switched from his previous agency to us.\n\n"I just didn't feel the founder was involved anymore."\n\nIn our industry, it's almost a default path. You start small, build credibility, get traction. And then as you scale, you naturally start offloading. Founders move from execution to hiring, strategy, and client acquisition. The backend strengthens. The systems grow.\n\nBut somewhere in that process, the personal touch that once defined the relationship starts to fade. And clients notice.\n\nIt's not that they expect you to write every email or sit on every call. But they remember the person who pitched them. The person they trusted first. When that presence disappears entirely, it feels like something shifted.\n\nI've seen it play out in our own story too. We had a client where we delivered genuinely strong results — CAC dropped significantly, organic reach grew 15x in a month. By any dashboard measure, things were working.\n\nAnd yet, they moved on.\n\nBecause somewhere between the numbers getting better and the relationship getting bigger, the personal connection had thinned. The founder had stepped back. The team was doing great work — but the client missed the human being who had shown up with the original promise.\n\nSo now, even as Torchlight grows, I try to stay visible — not in the weeds, but present. I join the first few calls. I set expectations personally. I show up at milestones that matter.\n\nBecause at the end of the day, people don't do business with agencies. People do business with people.` },
+    { id:'missed-targets-may', title:"What Missed Targets in May Actually Taught Us", tag:"Client Diaries", date:"2025-07-05", image:null, excerpt:"We missed the targets in May. It was for a brand we manage on Amazon. And then, instead of pointing fingers, we did something different.", content:`We missed the targets in May.\n\nIt was for a brand we manage on Amazon. We've all been there — when the end of the month rolls in and the numbers don't add up. Suddenly, looking at the dashboard feels heavier than ever.\n\nFor a moment, the old feeling crept in: frustration, doubt, the temptation to get stuck in what went wrong. Obviously, the blame game started.\n\nBut this time, we did something different.\n\nIf there's one thing experience has taught me, it's this: getting demotivated is the easiest step. Getting analytical is what actually matters.\n\nSo instead of staying lost in the loop, we got proactive.\n\nWe pulled up every bit of data — campaign reports, lead sources, client conversations. We sat as a team, asked uncomfortable questions, and dug for the root cause. We analysed every parameter, looked at deeper metrics like revenue share of each product instead of just revenue figures, and identified potential hero SKUs.\n\nIt wasn't about pointing fingers. It was about building a clear picture of what needed to change.\n\nBy June, the difference was obvious. We jumped to 2x of what we were doing previously.\n\nWith just small but focused changes in our strategy and execution, we emerged stronger as a team. And honestly? That turnaround felt better than any "perfect" month.\n\nThere's no playbook for how to bounce back — no one really teaches you that. The real win is using what you learn to come back stronger the next time.\n\nSo if you're staring at missed targets right now, don't let it stop you. Use it as fuel.` }
   ];
 
-  function readTime(text) { return Math.max(1, Math.ceil((text||'').split(/\s+/).length / 200)) + ' min read'; }
+  function readTime(text) { return Math.max(1,Math.ceil((text||'').split(/\s+/).length/200))+' min read'; }
   function formatDate(d) { if(!d) return ''; return new Date(d+'T00:00:00').toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'}); }
 
   function renderDiaries() {
     document.getElementById('diary-count').textContent = DIARIES.length;
-    const container = document.getElementById('diaries-container');
-    container.innerHTML = DIARIES.map((p, i) => `
+    document.getElementById('diaries-container').innerHTML = DIARIES.map((p,i)=>`
       <div class="post-card" onclick="openArticle('${p.id}')">
         <div class="post-card-left">
           <div>
@@ -245,13 +216,13 @@
           <div class="post-footer"><span class="post-read-time">${readTime(p.content)}</span><span class="post-arrow">→</span></div>
         </div>
         <div class="post-card-right">
-          ${p.image ? `<img src="${p.image}" alt="${p.title}" onerror="this.style.display='none'"/>` : `<div class="post-img-placeholder">◈</div>`}
+          ${p.image?`<img src="${p.image}" alt="${p.title}" onerror="this.style.display='none'"/>`:`<div class="post-img-placeholder">◈</div>`}
         </div>
       </div>`).join('');
   }
 
   function openArticle(id) {
-    const post = DIARIES.find(p => p.id === id);
+    const post = DIARIES.find(p=>p.id===id);
     if (!post) return;
     document.getElementById('art-tag').textContent = post.tag;
     document.getElementById('art-title').textContent = post.title;

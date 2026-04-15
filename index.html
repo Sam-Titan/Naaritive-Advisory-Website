@@ -43,951 +43,343 @@
       height: 64px;
       border-bottom: 2px solid var(--red);
     }
-    .nav-logo {
-      display: flex; align-items: baseline; gap: 2px;
-    }
-    .nav-logo .naari {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 26px;
-      color: var(--white);
-      letter-spacing: 2px;
-    }
-    .logo-img {
-      height: 60px;
-      width: auto;
-      object-fit: contain;
-    }
-    .nav-logo .tive {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 26px;
-      background: linear-gradient(135deg, var(--pink), var(--pink-lt));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      letter-spacing: 2px;
-    }
-    .nav-logo .advisory-tag {
-      margin-left: 8px;
-      background: var(--red);
-      color: var(--white);
-      font-family: 'Inter', sans-serif;
-      font-size: 9px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      padding: 2px 7px;
-      border-radius: 2px;
-      vertical-align: middle;
-    }
+    .nav-logo { display: flex; align-items: center; }
+    .logo-img { height: 52px; width: auto; object-fit: contain; }
     .nav-links {
       display: flex; align-items: center; gap: 36px;
       list-style: none;
     }
     .nav-links a {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #AAAAAA;
-      transition: color 0.2s;
+      font-size: 12px; font-weight: 500; letter-spacing: 2px;
+      text-transform: uppercase; color: #AAAAAA; transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--white); }
     .nav-links .nav-cta {
-      background: var(--red);
-      color: var(--white) !important;
-      padding: 8px 20px;
-      border-radius: 2px;
-      transition: background 0.2s !important;
+      background: var(--red); color: var(--white) !important;
+      padding: 8px 20px; border-radius: 2px; transition: background 0.2s !important;
     }
-    .nav-links .nav-cta:hover { background: var(--red-dark) !important; color: var(--white) !important; }
+    .nav-links .nav-cta:hover { background: var(--red-dark) !important; }
 
     /* ===== HERO ===== */
     #home {
-      min-height: 100vh;
-      background: var(--black);
-      display: flex; flex-direction: column;
-      justify-content: center;
-      padding: 100px 48px 80px;
-      position: relative;
-      overflow: hidden;
+      min-height: 100vh; background: var(--black);
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 100px 48px 80px; position: relative; overflow: hidden;
     }
     .hero-noise {
       position: absolute; inset: 0;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
       pointer-events: none; opacity: 0.3;
     }
-    .hero-eyebrow {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.6);
-      margin-bottom: 24px;
-    }
-    .hero-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(56px, 9vw, 128px);
-      font-weight: 900;
-      color: var(--white);
-      line-height: 0.9;
-      letter-spacing: -2px;
-      max-width: 900px;
-    }
-    .hero-title em {
-      font-style: italic;
-      background: linear-gradient(135deg, var(--white), var(--pink-lt));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .hero-divider {
-      width: 80px; height: 3px;
-      background: var(--white);
-      margin: 36px 0;
-    }
-    .hero-sub {
-      font-size: 17px;
-      font-weight: 300;
-      color: rgba(255,255,255,0.85);
-      max-width: 520px;
-      line-height: 1.7;
-    }
-    .hero-actions {
-      display: flex; align-items: center; gap: 20px;
-      margin-top: 48px;
-    }
-    .btn-primary {
-      background: var(--white);
-      color: var(--red);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      padding: 16px 36px;
-      border: none; cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
-      border-radius: 2px;
-    }
+    .hero-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 24px; }
+    .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(56px, 9vw, 128px); font-weight: 900; color: var(--white); line-height: 0.9; letter-spacing: -2px; max-width: 900px; }
+    .hero-title em { font-style: italic; background: linear-gradient(135deg, var(--white), var(--pink-lt)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-divider { width: 80px; height: 3px; background: var(--white); margin: 36px 0; }
+    .hero-sub { font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.85); max-width: 520px; line-height: 1.7; }
+    .hero-actions { display: flex; align-items: center; gap: 20px; margin-top: 48px; }
+    .btn-primary { background: var(--white); color: var(--red); font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 16px 36px; border: none; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; border-radius: 2px; }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
-    .btn-ghost {
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--white);
-      border-bottom: 1px solid rgba(255,255,255,0.4);
-      padding-bottom: 2px;
-      transition: border-color 0.2s;
-    }
+    .btn-ghost { font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--white); border-bottom: 1px solid rgba(255,255,255,0.4); padding-bottom: 2px; transition: border-color 0.2s; }
     .btn-ghost:hover { border-color: var(--white); }
-    .hero-scroll {
-      position: absolute; bottom: 40px; left: 48px;
-      display: flex; align-items: center; gap: 12px;
-      font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
-    }
-    .hero-scroll-line {
-      width: 48px; height: 1px; background: rgba(255,255,255,0.3);
-    }
-    .hero-decor {
-      position: absolute; right: 48px; top: 50%;
-      transform: translateY(-50%);
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 280px;
-      line-height: 1;
-      color: rgba(255,255,255,0.06);
-      user-select: none;
-      pointer-events: none;
-      letter-spacing: -10px;
-    }
+    .hero-scroll { position: absolute; bottom: 40px; left: 48px; display: flex; align-items: center; gap: 12px; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+    .hero-scroll-line { width: 48px; height: 1px; background: rgba(255,255,255,0.3); }
+    .hero-decor { position: absolute; right: 48px; top: 50%; transform: translateY(-50%); font-family: 'Bebas Neue', sans-serif; font-size: 280px; line-height: 1; color: rgba(255,255,255,0.06); user-select: none; pointer-events: none; letter-spacing: -10px; }
 
     /* ===== TICKER ===== */
-    .ticker-wrap {
-      background: var(--black);
-      overflow: hidden;
-      padding: 14px 0;
-      border-top: 1px solid #222;
-    }
-    .ticker-track {
-      display: flex;
-      width: max-content;
-      animation: ticker 28s linear infinite;
-    }
-    .ticker-item {
-      white-space: nowrap;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #555;
-      padding: 0 40px;
-    }
+    .ticker-wrap { background: var(--black); overflow: hidden; padding: 14px 0; border-top: 1px solid #222; }
+    .ticker-track { display: flex; width: max-content; animation: ticker 28s linear infinite; }
+    .ticker-item { white-space: nowrap; font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #555; padding: 0 40px; }
     .ticker-item span { color: var(--red); margin-right: 16px; }
-    @keyframes ticker {
-      from { transform: translateX(0); }
-      to   { transform: translateX(-50%); }
-    }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
     /* ===== SECTION SHARED ===== */
-    .section-label {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: var(--red);
-      margin-bottom: 12px;
-    }
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(32px, 4vw, 56px);
-      font-weight: 900;
-      color: var(--black);
-      line-height: 1.05;
-      letter-spacing: -1px;
-    }
+    .section-label { font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--red); margin-bottom: 12px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(32px, 4vw, 56px); font-weight: 900; color: var(--black); line-height: 1.05; letter-spacing: -1px; }
 
     /* ===== BLOG SECTION ===== */
-    #blog {
-      padding: 80px 48px;
-      background: var(--white);
-    }
-    .blog-header {
-      display: flex; align-items: flex-end; justify-content: space-between;
-      margin-bottom: 56px;
-      border-bottom: 1px solid var(--gray-mid);
-      padding-bottom: 28px;
-    }
-    .blog-header-right {
-      font-size: 12px;
-      color: var(--text-muted);
-      letter-spacing: 1px;
-    }
+    #blog { padding: 80px 48px; background: var(--white); }
+    .blog-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 56px; border-bottom: 1px solid var(--gray-mid); padding-bottom: 28px; }
+    .blog-header-right { font-size: 12px; color: var(--text-muted); letter-spacing: 1px; }
     .blog-header-right span { color: var(--red); font-weight: 600; }
-
-    /* Full-width editorial cards */
-    .post-card {
-      display: grid;
-      grid-template-columns: 1fr 380px;
-      gap: 0;
-      border-top: 1px solid var(--gray-mid);
-      padding: 40px 0;
-      transition: background 0.2s;
-      cursor: pointer;
-    }
-    .post-card:hover { background: transparent; }
+    .post-card { display: grid; grid-template-columns: 1fr 380px; gap: 0; border-top: 1px solid var(--gray-mid); padding: 40px 0; cursor: pointer; }
     .post-card:last-child { border-bottom: 1px solid var(--gray-mid); }
     .post-card-left { padding-right: 60px; display: flex; flex-direction: column; justify-content: space-between; }
-    .post-card-meta {
-      display: flex; align-items: center; gap: 16px;
-      margin-bottom: 20px;
-    }
-    .post-tag {
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      background: var(--red);
-      color: var(--white);
-      padding: 4px 10px;
-      border-radius: 1px;
-    }
-    .post-date {
-      font-size: 11px;
-      color: var(--text-muted);
-      letter-spacing: 1px;
-    }
-    .post-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(26px, 3vw, 42px);
-      font-weight: 900;
-      color: var(--black);
-      line-height: 1.1;
-      letter-spacing: -0.5px;
-      margin-bottom: 20px;
-      transition: color 0.2s;
-    }
+    .post-card-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+    .post-tag { font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; background: var(--red); color: var(--white); padding: 4px 10px; border-radius: 1px; }
+    .post-date { font-size: 11px; color: var(--text-muted); letter-spacing: 1px; }
+    .post-title { font-family: 'Playfair Display', serif; font-size: clamp(26px, 3vw, 42px); font-weight: 900; color: var(--black); line-height: 1.1; letter-spacing: -0.5px; margin-bottom: 20px; transition: color 0.2s; }
     .post-card:hover .post-title { color: var(--red); }
-    .post-excerpt {
-      font-size: 15px;
-      font-weight: 300;
-      color: var(--text-muted);
-      line-height: 1.75;
-      max-width: 600px;
-    }
-    .post-footer {
-      display: flex; align-items: center; gap: 20px;
-      margin-top: 28px;
-    }
-    .post-read-time {
-      font-size: 11px;
-      color: var(--text-muted);
-      letter-spacing: 1px;
-    }
-    .post-arrow {
-      font-size: 20px;
-      color: var(--red);
-      transition: transform 0.2s;
-    }
+    .post-excerpt { font-size: 15px; font-weight: 300; color: var(--text-muted); line-height: 1.75; max-width: 600px; }
+    .post-footer { display: flex; align-items: center; gap: 20px; margin-top: 28px; }
+    .post-read-time { font-size: 11px; color: var(--text-muted); letter-spacing: 1px; }
+    .post-arrow { font-size: 20px; color: var(--red); transition: transform 0.2s; }
     .post-card:hover .post-arrow { transform: translateX(6px); }
-    .post-card-right {
-      position: relative;
-      overflow: hidden;
-      background: var(--gray);
-      min-height: 240px;
-    }
-    .post-card-right img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s ease;
-    }
+    .post-card-right { position: relative; overflow: hidden; background: var(--gray); min-height: 240px; }
+    .post-card-right img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
     .post-card:hover .post-card-right img { transform: scale(1.04); }
-    .post-card-right .post-img-placeholder {
-      width: 100%; height: 100%; min-height: 240px;
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 80px;
-      color: var(--gray-mid);
-      background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
-    }
+    .post-card-right .post-img-placeholder { width: 100%; height: 100%; min-height: 240px; display: flex; align-items: center; justify-content: center; font-family: 'Bebas Neue', sans-serif; font-size: 80px; color: var(--gray-mid); background: linear-gradient(135deg, #f0f0f0, #e0e0e0); }
 
-    /* ===== FEATURED IN ===== */
+    /* ===== FEATURED IN — Redesigned ===== */
     #featured {
-      background: #121212;
-      border-top: 1px solid #2A2A2A;
-      box-shadow: inset 0 40px 80px rgba(255,255,255,0.02);
-      padding: 0 32px 40px;
+      background: #0D0D0D;
+      padding: 56px 48px;
+      border-top: 1px solid #1A1A1A;
+      border-bottom: 1px solid #1A1A1A;
     }
-    .featured-top-bar {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 28px 0 24px;
-      border-bottom: 1px solid #121212;
-      margin-bottom: 28px;
+    .featured-header {
+      display: flex; align-items: flex-end; justify-content: space-between;
+      margin-bottom: 40px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid #1E1E1E;
+    }
+    .featured-header-left .featured-eyebrow {
+      font-size: 10px; font-weight: 700; letter-spacing: 4px;
+      text-transform: uppercase; color: var(--red); margin-bottom: 8px;
     }
     .featured-heading {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(28px, 3vw, 44px);
+      font-size: clamp(28px, 3.5vw, 48px);
       font-weight: 900; color: var(--white);
-      letter-spacing: -0.5px;
+      letter-spacing: -0.5px; line-height: 1;
     }
     .featured-heading em { font-style: italic; color: var(--red); }
-    .featured-heading-sub {
-      font-size: 13px; color: #555; letter-spacing: 1px; margin-top: 6px;
+    .featured-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #1A1A1A; border: 1px solid #2A2A2A;
+      padding: 8px 16px; border-radius: 100px;
+      font-size: 10px; font-weight: 700; letter-spacing: 3px;
+      text-transform: uppercase; color: #444;
+      flex-shrink: 0;
     }
-    .featured-scroll-hint {
-      font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
-      color: #333; display: flex; align-items: center; gap: 8px; flex-shrink: 0;
-    }
-    .featured-scroll-hint::before { content: ''; width: 32px; height: 1px; background: #333; }
+    .featured-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--red); }
+
+    /* Featured cards — horizontal strip layout */
     .featured-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
+      gap: 2px;
     }
     .featured-card {
-      background: #1A1A1A;
-      padding: 24px 20px;
+      background: #141414;
+      padding: 32px 28px;
       display: flex; flex-direction: column;
       text-decoration: none;
       position: relative; overflow: hidden;
-      transition: background 0.25s;
-      border-top: 3px solid transparent;
+      transition: background 0.3s, transform 0.2s;
+      border-bottom: 3px solid transparent;
     }
-    .featured-card:hover { background: #141414; border-top-color: var(--red); }
+    .featured-card:hover { background: #1A1A1A; border-bottom-color: var(--red); }
+    .featured-card-top {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 28px;
+    }
+    /* Logo wrapper — shows actual publication logos */
+    .featured-logo-box {
+      height: 36px;
+      display: flex; align-items: center;
+      overflow: hidden;
+    }
+    .featured-logo-box img {
+      height: 100%;
+      width: auto;
+      max-width: 140px;
+      object-fit: contain;
+      filter: grayscale(1) brightness(1.8);
+      opacity: 0.7;
+      transition: filter 0.3s, opacity 0.3s;
+    }
+    .featured-card:hover .featured-logo-box img {
+      filter: grayscale(0) brightness(1.1);
+      opacity: 1;
+    }
     .featured-card-num {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 72px; color: #161616;
-      line-height: 1; position: absolute;
-      top: 16px; right: 24px;
-      transition: color 0.25s;
-      user-select: none;
+      font-size: 13px; letter-spacing: 3px;
+      color: #2A2A2A; transition: color 0.3s;
     }
-    .featured-card:hover .featured-card-num { color: #1E1E1E; }
-    .featured-logo-wrap {
-      width: 34px;
-      height: 34px;
-      border-radius: 6px; 
-      margin-bottom: 24px;
-      background: #1A1A1A;
-      display: flex; align-items: center; justify-content: center;
-      border: 1px solid #222;
-      transition: border-color 0.25s;
-      flex-shrink: 0;
-    }
-    .featured-card:hover .featured-logo-wrap { border-color: var(--red); }
-    .featured-logo-wrap img {
-      width: 20px; height: 20px; object-fit: contain;
-      filter: grayscale(1) brightness(2);
-      transition: filter 0.25s;
-    }
-    .featured-card:hover .featured-logo-wrap img { filter: grayscale(0.3) brightness(1.3); }
-    .featured-logo-text {
-      font-family: 'Bebas Neue', sans-serif; font-size: 16px;
-      letter-spacing: 2px; color: #fff;
-    }
+    .featured-card:hover .featured-card-num { color: var(--red); }
     .featured-pub {
-      font-size: 10px; font-weight: 700; letter-spacing: 3px;
+      font-size: 9px; font-weight: 700; letter-spacing: 3px;
       text-transform: uppercase; color: var(--red);
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
     .featured-headline {
       font-family: 'Playfair Display', serif;
-      font-size: 16px; font-weight: 700;
-      color: #CCC; line-height: 1.4;
-      transition: color 0.25s; flex: 1;
-      margin-bottom: 24px;
+      font-size: 17px; font-weight: 700;
+      color: #888; line-height: 1.45;
+      transition: color 0.3s; flex: 1;
+      margin-bottom: 28px;
     }
     .featured-card:hover .featured-headline { color: var(--white); }
     .featured-cta {
-      font-size: 10px; font-weight: 700; letter-spacing: 2px;
-      text-transform: uppercase; color: #333;
-      display: flex; align-items: center; gap: 8px;
-      transition: color 0.25s;
-    }
-    .featured-card:hover {
-      box-shadow: 0 10px 30px rgba(255, 45, 45, 0.08);
-    }
-    .featured-cta::after { content: '→'; transition: transform 0.2s; display: inline-block; }
-    .featured-card:hover .featured-cta { color: var(--red); }
-    .featured-card:hover .featured-cta::after { transform: translateX(4px); }
-    @media (max-width: 768px) {
-      #featured {
-        padding: 0 16px 32px;
-      }
-
-      .featured-row {
-        grid-template-columns: 1fr;
-        gap: 8px;
-      }
-
-      .featured-card {
-        padding: 20px 16px;
-      }
-
-      .featured-heading {
-        font-size: 24px;
-      }
-
-      .featured-headline {
-        font-size: 15px;
-      }
-
-      .featured-logo-wrap {
-        width: 30px;
-        height: 30px;
-      }
-    }
-
-    /* ===== PUBLICATIONS SECTION ===== */
-    #publications {
-      background: #0D1117;
-      padding: 80px 48px;
-      border-bottom: 1px solid #1A222E;
-    }
-    .pub-header {
-      max-width: 1200px; margin: 0 auto 56px;
-      display: flex; align-items: flex-end; justify-content: space-between;
-      border-bottom: 1px solid #1E2A38; padding-bottom: 36px;
-    }
-    .pub-header-left .section-label { color: var(--red); }
-    .pub-header-left .section-title { color: var(--white); margin-top: 8px; }
-    .pub-header-sub {
-      font-size: 14px; font-weight: 300; color: #4A6080;
-      max-width: 340px; line-height: 1.7; text-align: right;
-    }
-    .pub-grid {
-      max-width: 1200px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 1fr; gap: 3px;
-    }
-    .pub-card {
-      background: #141C26; padding: 44px;
-      position: relative; overflow: hidden;
-      transition: background 0.3s;
-      display: flex; flex-direction: column;
-    }
-    .pub-card:hover { background: #1A2535; }
-    .pub-card::after {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: var(--red); transform: scaleX(0); transform-origin: left;
-      transition: transform 0.3s;
-    }
-    .pub-card:hover::after { transform: scaleX(1); }
-    .pub-type-badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-size: 9px; font-weight: 700; letter-spacing: 3px;
-      text-transform: uppercase; color: var(--red);
-      border: 1px solid rgba(255,45,45,0.3); padding: 5px 12px;
-      border-radius: 2px; margin-bottom: 32px; width: fit-content;
-    }
-    .pub-publisher-row {
-      display: flex; align-items: center; gap: 12px; margin-bottom: 28px;
-    }
-    .pub-pub-icon {
-      width: 32px; height: 32px; border-radius: 3px;
-      background: #1E2A3A; border: 1px solid #2A3A4E;
-      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-    }
-    .pub-pub-icon img { width: 20px; height: 20px; object-fit: contain; filter: grayscale(1) brightness(1.8); }
-    .pub-pub-name {
-      font-size: 10px; font-weight: 700; letter-spacing: 3px;
-      text-transform: uppercase; color: #4A6080;
-    }
-    .pub-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 26px; font-weight: 700;
-      color: var(--white); line-height: 1.4;
-      margin-bottom: 20px; flex-grow: 1;
-    }
-    .pub-title em { font-style: italic; color: rgba(255,255,255,0.6); }
-    .pub-desc {
-      font-size: 13px; font-weight: 300; color: #4A6080;
-      line-height: 1.8; margin-bottom: 32px;
-    }
-    .pub-footer {
-      display: flex; align-items: center; justify-content: space-between;
-      padding-top: 24px; border-top: 1px solid #1E2A3A;
-    }
-    .pub-meta-label {
-      font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #3A4E66; margin-bottom: 4px;
-    }
-    .pub-meta-val { font-size: 12px; color: #556677; line-height: 1.5; }
-    .pub-meta-val strong { color: var(--white); font-weight: 600; }
-    .pub-link {
       display: inline-flex; align-items: center; gap: 8px;
       font-size: 10px; font-weight: 700; letter-spacing: 2px;
-      text-transform: uppercase; color: var(--red);
-      border-bottom: 1px solid rgba(255,45,45,0.3); padding-bottom: 2px;
-      transition: all 0.2s; white-space: nowrap;
+      text-transform: uppercase; color: #2A2A2A;
+      border-bottom: 1px solid #2A2A2A;
+      padding-bottom: 2px;
+      transition: color 0.3s, border-color 0.3s;
     }
+    .featured-cta::after { content: '→'; display: inline-block; transition: transform 0.2s; }
+    .featured-card:hover .featured-cta { color: var(--red); border-color: var(--red); }
+    .featured-card:hover .featured-cta::after { transform: translateX(4px); }
+
+    /* ===== PUBLICATIONS SECTION ===== */
+    #publications { background: #0D1117; padding: 80px 48px; border-bottom: 1px solid #1A222E; }
+    .pub-header { max-width: 1200px; margin: 0 auto 56px; display: flex; align-items: flex-end; justify-content: space-between; border-bottom: 1px solid #1E2A38; padding-bottom: 36px; }
+    .pub-header-left .section-label { color: var(--red); }
+    .pub-header-left .section-title { color: var(--white); margin-top: 8px; }
+    .pub-header-sub { font-size: 14px; font-weight: 300; color: #4A6080; max-width: 340px; line-height: 1.7; text-align: right; }
+    .pub-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
+    .pub-card { background: #141C26; padding: 44px; position: relative; overflow: hidden; transition: background 0.3s; display: flex; flex-direction: column; }
+    .pub-card:hover { background: #1A2535; }
+    .pub-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--red); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
+    .pub-card:hover::after { transform: scaleX(1); }
+    .pub-type-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--red); border: 1px solid rgba(255,45,45,0.3); padding: 5px 12px; border-radius: 2px; margin-bottom: 32px; width: fit-content; }
+    .pub-publisher-row { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
+    .pub-pub-icon { width: 32px; height: 32px; border-radius: 3px; background: #1E2A3A; border: 1px solid #2A3A4E; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .pub-pub-icon img { width: 20px; height: 20px; object-fit: contain; filter: grayscale(1) brightness(1.8); }
+    .pub-pub-name { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #4A6080; }
+    .pub-title { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--white); line-height: 1.4; margin-bottom: 20px; flex-grow: 1; }
+    .pub-title em { font-style: italic; color: rgba(255,255,255,0.6); }
+    .pub-desc { font-size: 13px; font-weight: 300; color: #4A6080; line-height: 1.8; margin-bottom: 32px; }
+    .pub-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 24px; border-top: 1px solid #1E2A3A; }
+    .pub-meta-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #3A4E66; margin-bottom: 4px; }
+    .pub-meta-val { font-size: 12px; color: #556677; line-height: 1.5; }
+    .pub-meta-val strong { color: var(--white); font-weight: 600; }
+    .pub-link { display: inline-flex; align-items: center; gap: 8px; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--red); border-bottom: 1px solid rgba(255,45,45,0.3); padding-bottom: 2px; transition: all 0.2s; white-space: nowrap; }
     .pub-link:hover { color: var(--white); border-color: var(--white); }
-    .pub-cover-wrap {
-      margin-bottom: 28px;
-      position: relative;
-      width: 120px;
-    }
-    .pub-cover-wrap img {
-      width: 120px; height: 168px;
-      object-fit: cover; display: block;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
-    }
-    .pub-cover-svg {
-      width: 120px; height: 168px; display: block;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
-    }
-    @media (max-width: 900px) {
-      #publications { padding: 56px 24px; }
-      .pub-grid { grid-template-columns: 1fr; }
-      .pub-header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      .pub-header-sub { text-align: left; }
-    }
+    .pub-cover-wrap { margin-bottom: 28px; position: relative; width: 120px; }
+    .pub-cover-wrap img { width: 120px; height: 168px; object-fit: cover; display: block; box-shadow: 0 8px 24px rgba(0,0,0,0.6); }
+    .pub-cover-svg { width: 120px; height: 168px; display: block; box-shadow: 0 8px 24px rgba(0,0,0,0.6); }
 
     /* ===== VIEW ALL BUTTON ===== */
-    .section-view-all {
-      text-align: center;
-      margin-top: 48px;
-      padding-top: 40px;
-      border-top: 1px solid var(--gray-mid);
-    }
-    .btn-view-all {
-      display: inline-flex; align-items: center; gap: 10px;
-      border: 1.5px solid var(--black);
-      color: var(--black);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      padding: 16px 40px;
-      border-radius: 2px;
-      transition: all 0.25s;
-    }
+    .section-view-all { text-align: center; margin-top: 48px; padding-top: 40px; border-top: 1px solid var(--gray-mid); }
+    .btn-view-all { display: inline-flex; align-items: center; gap: 10px; border: 1.5px solid var(--black); color: var(--black); font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; padding: 16px 40px; border-radius: 2px; transition: all 0.25s; }
     .btn-view-all:hover { background: var(--black); color: var(--white); }
     .btn-view-all span { transition: transform 0.2s; }
     .btn-view-all:hover span { transform: translateX(4px); }
 
     /* ===== CLIENT DIARIES SECTION ===== */
-    #diaries {
-      padding: 72px 48px 88px;
-      background: #FAFAFA;
-      border-top: 1px solid var(--gray-mid);
-    }
+    #diaries { padding: 72px 48px 88px; background: #FAFAFA; border-top: 1px solid var(--gray-mid); }
     #diaries .blog-header { margin-bottom: 16px; }
-    .diaries-sub {
-      margin-top: 12px;
-      font-size: 15px;
-      color: var(--text-muted);
-      max-width: 520px;
-      line-height: 1.7;
-    }
+    .diaries-sub { margin-top: 12px; font-size: 15px; color: var(--text-muted); max-width: 520px; line-height: 1.7; }
     #diaries .post-tag { background: var(--pink); }
     #diaries .post-card:hover .post-title { color: var(--pink); }
     #diaries .post-arrow { color: var(--pink); }
 
     /* ===== ABOUT SECTION ===== */
-    #about {
-      padding: 80px 48px;
-      background: var(--black);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
+    #about { padding: 80px 48px; background: var(--black); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
     #about .section-label { color: var(--pink); }
     #about .section-title { color: var(--white); }
-    .about-body {
-      font-size: 16px;
-      font-weight: 300;
-      color: rgba(255,255,255,0.7);
-      line-height: 1.85;
-      margin-top: 24px;
-    }
+    .about-body { font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.85; margin-top: 24px; }
     .about-body strong { color: var(--white); font-weight: 600; }
-    .about-stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2px;
-      margin-top: 48px;
-    }
-    .stat-box {
-      background: #111;
-      padding: 28px 32px;
-    }
+    .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 48px; }
+    .stat-box { background: #111; padding: 28px 32px; }
     .stat-box:first-child { background: var(--red); }
-    .stat-number {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 56px;
-      color: var(--white);
-      line-height: 1;
-    }
-    .stat-label {
-      font-size: 11px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
-      margin-top: 8px;
-    }
+    .stat-number { font-family: 'Bebas Neue', sans-serif; font-size: 56px; color: var(--white); line-height: 1; }
+    .stat-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-top: 8px; }
     .stat-box:first-child .stat-label { color: rgba(255,255,255,0.75); }
-    .about-right {
-      position: relative;
-    }
-    .about-quote-card {
-      background: var(--red);
-      padding: 48px;
-      position: relative;
-    }
-    .about-quote-card::before {
-      content: '\201C';
-      font-family: 'Playfair Display', serif;
-      font-size: 160px;
-      color: rgba(255,255,255,0.15);
-      position: absolute;
-      top: -20px; left: 24px;
-      line-height: 1;
-    }
-    .about-quote {
-      font-family: 'Playfair Display', serif;
-      font-size: 26px;
-      font-style: italic;
-      color: var(--white);
-      line-height: 1.5;
-      position: relative;
-      z-index: 1;
-    }
-    .about-quote-author {
-      margin-top: 24px;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.7);
-    }
-    .about-tags {
-      display: flex; flex-wrap: wrap; gap: 8px;
-      margin-top: 32px;
-    }
-    .about-tag {
-      border: 1px solid #333;
-      color: #888;
-      font-size: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      padding: 6px 14px;
-      border-radius: 100px;
-    }
+    .about-quote-card { background: var(--red); padding: 48px; position: relative; }
+    .about-quote-card::before { content: '\201C'; font-family: 'Playfair Display', serif; font-size: 160px; color: rgba(255,255,255,0.15); position: absolute; top: -20px; left: 24px; line-height: 1; }
+    .about-quote { font-family: 'Playfair Display', serif; font-size: 26px; font-style: italic; color: var(--white); line-height: 1.5; position: relative; z-index: 1; }
+    .about-quote-author { margin-top: 24px; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.7); }
+    .about-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 32px; }
+    .about-tag { border: 1px solid #333; color: #888; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; padding: 6px 14px; border-radius: 100px; }
 
     /* ===== FOUNDER SECTION ===== */
-    #founder {
-      background: #F7F4EF;
-      padding: 80px 48px;
-      display: grid;
-      grid-template-columns: 380px 1fr;
-      gap: 80px;
-      align-items: center;
-      border-top: 3px solid var(--red);
-    }
+    #founder { background: #F7F4EF; padding: 80px 48px; display: grid; grid-template-columns: 380px 1fr; gap: 80px; align-items: center; border-top: 3px solid var(--red); }
     .founder-img-block { position: relative; flex-shrink: 0; }
-    .founder-img-block img {
-      width: 100%; aspect-ratio: 3/4;
-      object-fit: cover; object-position: top;
-      display: block;
-    }
-    .founder-img-fallback {
-      width: 100%; aspect-ratio: 3/4;
-      background: #E5E0D8;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .founder-img-caption {
-      position: absolute; bottom: 0; left: 0; right: 0;
-      background: var(--red);
-      padding: 18px 24px;
-    }
-    .founder-img-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 18px; font-weight: 700; color: var(--white);
-    }
-    .founder-img-role {
-      font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
-      color: rgba(255,255,255,0.75); margin-top: 4px;
-    }
+    .founder-img-block img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; display: block; }
+    .founder-img-fallback { width: 100%; aspect-ratio: 3/4; background: #E5E0D8; display: flex; align-items: center; justify-content: center; }
+    .founder-img-caption { position: absolute; bottom: 0; left: 0; right: 0; background: var(--red); padding: 18px 24px; }
+    .founder-img-name { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--white); }
+    .founder-img-role { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.75); margin-top: 4px; }
     .founder-content .section-label { color: var(--red); }
     .founder-content .section-title { color: var(--black); margin-bottom: 32px; }
-    .founder-bio {
-      font-size: 16px; font-weight: 300; color: rgba(0,0,0,0.6);
-      line-height: 1.85; max-width: 560px;
-    }
+    .founder-bio { font-size: 16px; font-weight: 300; color: rgba(0,0,0,0.6); line-height: 1.85; max-width: 560px; }
     .founder-bio + .founder-bio { margin-top: 20px; }
-    .founder-cred-row {
-      display: flex; gap: 3px; margin-top: 40px;
-    }
-    .founder-cred {
-      background: #EAE5DC; padding: 24px 28px; flex: 1;
-    }
+    .founder-cred-row { display: flex; gap: 3px; margin-top: 40px; }
+    .founder-cred { background: #EAE5DC; padding: 24px 28px; flex: 1; }
     .founder-cred.red { background: var(--red); }
-    .founder-cred-val {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 44px; color: var(--black); line-height: 1;
-    }
+    .founder-cred-val { font-family: 'Bebas Neue', sans-serif; font-size: 44px; color: var(--black); line-height: 1; }
     .founder-cred.red .founder-cred-val { color: var(--white); }
-    .founder-cred-label {
-      font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
-      color: rgba(0,0,0,0.4); margin-top: 8px;
-    }
+    .founder-cred-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(0,0,0,0.4); margin-top: 8px; }
     .founder-cred.red .founder-cred-label { color: rgba(255,255,255,0.7); }
-    @media (max-width: 900px) {
-      #founder { grid-template-columns: 1fr; gap: 40px; padding: 60px 24px; }
-      .founder-img-block { max-width: 320px; }
-      .founder-cred-row { flex-wrap: wrap; }
-    }
 
     /* ===== CONNECT SECTION ===== */
-    #contact {
-      padding: 100px 48px;
-      background: var(--black);
-      text-align: center;
-    }
-    .connect-eyebrow {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: var(--red);
-      margin-bottom: 16px;
-    }
-    .connect-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(36px, 5vw, 72px);
-      font-weight: 900;
-      color: var(--white);
-      line-height: 1;
-      letter-spacing: -2px;
-      margin-bottom: 20px;
-    }
-    .connect-title em {
-      font-style: italic;
-      background: linear-gradient(135deg, var(--pink), var(--pink-lt));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .connect-sub {
-      font-size: 16px;
-      font-weight: 300;
-      color: rgba(255,255,255,0.45);
-      max-width: 460px;
-      margin: 0 auto 64px;
-      line-height: 1.7;
-    }
+    #contact { padding: 100px 48px; background: var(--black); text-align: center; }
+    .connect-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--red); margin-bottom: 16px; }
+    .connect-title { font-family: 'Playfair Display', serif; font-size: clamp(36px, 5vw, 72px); font-weight: 900; color: var(--white); line-height: 1; letter-spacing: -2px; margin-bottom: 20px; }
+    .connect-title em { font-style: italic; background: linear-gradient(135deg, var(--pink), var(--pink-lt)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .connect-sub { font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.45); max-width: 460px; margin: 0 auto 64px; line-height: 1.7; }
+
+    /* Social cards — horizontal single row */
     .social-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
       gap: 3px;
       max-width: 900px;
       margin: 0 auto;
     }
     .social-card {
+      flex: 1;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
       justify-content: center;
       gap: 20px;
-      padding: 48px 32px;
+      padding: 36px 28px;
       background: #111;
       text-decoration: none;
       border-top: 3px solid transparent;
+      border-bottom: 3px solid transparent;
       transition: background 0.25s, border-color 0.25s;
       position: relative;
       overflow: hidden;
     }
     .social-card:hover { background: #161616; }
-    .social-card.instagram:hover { border-top-color: #E1306C; }
-    .social-card.linkedin:hover  { border-top-color: #0A66C2; }
-    .social-card.youtube:hover   { border-top-color: #FF0000; }
-    .social-icon {
-      width: 52px; height: 52px;
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-      transition: transform 0.25s;
-    }
+    .social-card.instagram:hover { border-bottom-color: #E1306C; }
+    .social-card.linkedin:hover  { border-bottom-color: #0A66C2; }
+    .social-card.youtube:hover   { border-bottom-color: #FF0000; }
+    .social-icon { width: 46px; height: 46px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: transform 0.25s; }
     .social-card:hover .social-icon { transform: scale(1.08); }
     .social-card.instagram .social-icon { background: linear-gradient(135deg, #F58529, #DD2A7B, #8134AF); }
     .social-card.linkedin  .social-icon { background: #0A66C2; }
     .social-card.youtube   .social-icon { background: #FF0000; }
-    .social-icon svg { width: 26px; height: 26px; fill: #fff; }
-    .social-platform {
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #444;
-      margin-bottom: 4px;
-    }
-    .social-handle {
-      font-family: 'Playfair Display', serif;
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--white);
-      transition: color 0.2s;
-    }
+    .social-icon svg { width: 24px; height: 24px; fill: #fff; }
+    .social-info { text-align: left; }
+    .social-platform { font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #444; margin-bottom: 4px; }
+    .social-handle { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--white); transition: color 0.2s; }
     .social-card.instagram:hover .social-handle { color: #E1306C; }
     .social-card.linkedin:hover  .social-handle { color: #5BA3F5; }
     .social-card.youtube:hover   .social-handle { color: #FF4444; }
-    .social-cta {
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #333;
-      margin-top: 4px;
-      transition: color 0.2s;
-    }
+    .social-cta { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #333; margin-top: 4px; transition: color 0.2s; }
     .social-card:hover .social-cta { color: #666; }
-    @media (max-width: 900px) {
-      #contact { padding: 72px 24px; }
-      .social-grid { grid-template-columns: 1fr; max-width: 400px; }
-    }
 
     /* ===== FOOTER ===== */
-    footer {
-      background: #060606;
-      border-top: 1px solid #141414;
-    }
+    footer { background: #060606; border-top: 1px solid #141414; }
     .footer-top {
       display: grid;
-      grid-template-columns: 1.6fr 1fr 1fr;
+      grid-template-columns: 1.6fr 1fr;
       gap: 64px;
       padding: 64px 48px 48px;
       border-bottom: 1px solid #141414;
     }
-    .footer-brand-logo {
-      display: flex; align-items: baseline; gap: 2px;
-      margin-bottom: 16px;
-    }
-    .footer-brand-logo .naari {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 28px; color: var(--white); letter-spacing: 2px;
-    }
-    .footer-brand-logo .tive {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 28px;
-      background: linear-gradient(135deg, var(--pink), var(--pink-lt));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text; letter-spacing: 2px;
-    }
-    .footer-brand-logo .advisory-tag {
-      margin-left: 8px;
-      background: var(--red); color: var(--white);
-      font-size: 8px; font-weight: 600; letter-spacing: 2px;
-      text-transform: uppercase; padding: 2px 6px; border-radius: 2px;
-    }
-    .footer-tagline {
-      font-size: 14px;
-      font-weight: 300;
-      color: rgba(255,255,255,0.3);
-      line-height: 1.7;
-      max-width: 280px;
-    }
-    .footer-col-title {
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #333;
-      margin-bottom: 20px;
-    }
-    .footer-links {
-      display: flex; flex-direction: column; gap: 12px;
-      list-style: none;
-    }
-    .footer-links a {
-      font-size: 14px;
-      color: rgba(255,255,255,0.35);
-      transition: color 0.2s;
-      letter-spacing: 0.3px;
-    }
+    .footer-brand-logo { display: flex; align-items: center; margin-bottom: 16px; }
+    .footer-brand-logo .logo-img { height: 52px; width: auto; object-fit: contain; }
+    .footer-tagline { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.3); line-height: 1.7; max-width: 280px; }
+    .footer-col-title { font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #333; margin-bottom: 20px; }
+    .footer-links { display: flex; flex-direction: column; gap: 12px; list-style: none; }
+    .footer-links a { font-size: 14px; color: rgba(255,255,255,0.35); transition: color 0.2s; letter-spacing: 0.3px; }
     .footer-links a:hover { color: var(--white); }
-    .footer-social-links {
-      display: flex; flex-direction: column; gap: 12px;
-    }
-    .footer-social-link {
-      display: flex; align-items: center; gap: 12px;
-      text-decoration: none;
-      color: rgba(255,255,255,0.35);
-      font-size: 14px;
-      transition: color 0.2s;
-    }
-    .footer-social-link:hover { color: var(--white); }
-    .footer-social-dot {
-      width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0;
-    }
-    .footer-social-link.ig  .footer-social-dot { background: #E1306C; }
-    .footer-social-link.li  .footer-social-dot { background: #0A66C2; }
-    .footer-social-link.yt  .footer-social-dot { background: #FF0000; }
-    .footer-bottom {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 24px 48px;
-    }
-    .footer-copy {
-      font-size: 11px;
-      color: #2A2A2A;
-      letter-spacing: 1px;
-    }
-    .footer-made {
-      font-size: 11px;
-      color: #222;
-      letter-spacing: 0.5px;
-    }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding: 24px 48px; }
+    .footer-copy { font-size: 11px; color: #2A2A2A; letter-spacing: 1px; }
+    .footer-made { font-size: 11px; color: #222; letter-spacing: 0.5px; }
     .footer-made span { color: var(--red); }
-    @media (max-width: 900px) {
-      .footer-top { grid-template-columns: 1fr; gap: 40px; padding: 48px 24px 32px; }
-      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; padding: 20px 24px; }
-    }
 
     /* ===== ARTICLE VIEW ===== */
-    #article-overlay {
-      display: none;
-      position: fixed; inset: 0; z-index: 2000;
-      background: var(--white);
-      overflow-y: auto;
-    }
+    #article-overlay { display: none; position: fixed; inset: 0; z-index: 2000; background: var(--white); overflow-y: auto; }
     #article-overlay.open { display: block; }
     .article-nav {
       position: sticky; top: 0;
@@ -997,79 +389,67 @@
       display: flex; align-items: center; justify-content: space-between;
       z-index: 100;
     }
-    .article-nav .naari { color: var(--black); }
-    .article-nav .tive {
-      background: linear-gradient(135deg, var(--pink), var(--pink-lt));
+    /* Fix: logo visible on white background */
+    .article-nav .overlay-logo {
+      display: flex; align-items: center;
+    }
+    .article-nav .overlay-logo .naari {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      color: var(--black);
+      letter-spacing: 2px;
+    }
+    .article-nav .overlay-logo .tive {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      background: linear-gradient(135deg, var(--pink), var(--pink-mid));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-    }
-    .article-back {
-      font-size: 12px;
-      font-weight: 600;
       letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--red);
-      cursor: pointer;
-      display: flex; align-items: center; gap: 8px;
     }
-    .article-body-wrap {
-      max-width: 740px;
-      margin: 0 auto;
-      padding: 64px 48px 100px;
-    }
-    .article-tag {
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      background: var(--red);
-      color: var(--white);
-      padding: 4px 10px;
-      border-radius: 1px;
-      display: inline-block;
-      margin-bottom: 20px;
-    }
-    .article-headline {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(36px, 5vw, 64px);
-      font-weight: 900;
-      line-height: 1.05;
-      letter-spacing: -1px;
-      margin-bottom: 24px;
-    }
-    .article-meta {
-      display: flex; align-items: center; gap: 20px;
-      font-size: 12px;
-      color: var(--text-muted);
-      letter-spacing: 1px;
-      margin-bottom: 48px;
-      padding-bottom: 32px;
-      border-bottom: 1px solid var(--gray-mid);
-    }
-    .article-content {
-      font-size: 17px;
-      line-height: 1.85;
-      color: #2A2A2A;
-      white-space: pre-wrap;
-    }
-    .article-content p { margin-bottom: 24px; }
+    .article-back { font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--red); cursor: pointer; display: flex; align-items: center; gap: 8px; }
+    .article-body-wrap { max-width: 740px; margin: 0 auto; padding: 64px 48px 100px; }
+    .article-tag { font-size: 9px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; background: var(--red); color: var(--white); padding: 4px 10px; border-radius: 1px; display: inline-block; margin-bottom: 20px; }
+    .article-headline { font-family: 'Playfair Display', serif; font-size: clamp(36px, 5vw, 64px); font-weight: 900; line-height: 1.05; letter-spacing: -1px; margin-bottom: 24px; }
+    .article-meta { display: flex; align-items: center; gap: 20px; font-size: 12px; color: var(--text-muted); letter-spacing: 1px; margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid var(--gray-mid); }
+    .article-content { font-size: 17px; line-height: 1.85; color: #2A2A2A; white-space: pre-wrap; }
 
     /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .featured-row { grid-template-columns: 1fr 1fr; }
+      .featured-row .featured-card:last-child { grid-column: span 2; }
+    }
     @media (max-width: 900px) {
       nav { padding: 0 24px; }
-      .nav-links { gap: 20px; }
+      .nav-links { gap: 16px; }
+      .nav-links a { font-size: 10px; }
+      .nav-links .nav-cta { padding: 6px 12px; }
       #home { padding: 100px 24px 80px; }
       .hero-decor { display: none; }
       #blog { padding: 56px 24px; }
       .blog-header { flex-direction: column; align-items: flex-start; gap: 16px; }
       .post-card { grid-template-columns: 1fr; }
       .post-card-right { min-height: 200px; }
+      .post-card-left { padding-right: 0; }
+      #featured { padding: 40px 24px; }
+      .featured-row { grid-template-columns: 1fr; }
+      .featured-row .featured-card:last-child { grid-column: span 1; }
+      .featured-header { flex-direction: column; align-items: flex-start; gap: 16px; }
       #about { grid-template-columns: 1fr; padding: 56px 24px; gap: 48px; }
       #diaries { padding: 56px 24px 72px; }
-      #contact { padding: 56px 24px; }
-      .form-row { grid-template-columns: 1fr; }
-      footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
+      #founder { grid-template-columns: 1fr; gap: 40px; padding: 60px 24px; }
+      .founder-img-block { max-width: 320px; }
+      .founder-cred-row { flex-wrap: wrap; }
+      #publications { padding: 56px 24px; }
+      .pub-grid { grid-template-columns: 1fr; }
+      .pub-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .pub-header-sub { text-align: left; }
+      #contact { padding: 72px 24px; }
+      .social-grid { flex-direction: column; max-width: 420px; }
+      .social-card { padding: 24px 20px; justify-content: flex-start; }
+      footer .footer-top { grid-template-columns: 1fr; gap: 40px; padding: 48px 24px 32px; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; padding: 20px 24px; }
       .article-nav { padding: 16px 24px; }
       .article-body-wrap { padding: 40px 24px 80px; }
     }
@@ -1106,7 +486,7 @@
 
 <!-- TICKER -->
 <div class="ticker-wrap">
-  <div class="ticker-track" id="tickerTrack">
+  <div class="ticker-track">
     <span class="ticker-item"><span>✦</span> Brand Strategy</span>
     <span class="ticker-item"><span>✦</span> Marketing Intelligence</span>
     <span class="ticker-item"><span>✦</span> Consumer Insights</span>
@@ -1122,14 +502,14 @@
   </div>
 </div>
 
-<!-- FEATURED IN -->
+<!-- FEATURED IN — redesigned with real logos -->
 <section id="featured">
-  <div class="featured-top-bar">
-    <div>
+  <div class="featured-header">
+    <div class="featured-header-left">
+      <p class="featured-eyebrow">Press &amp; Recognition</p>
       <h3 class="featured-heading">Featured &amp; <em>Recognised</em></h3>
-      <p class="featured-heading-sub">Publications, press &amp; academic recognition</p>
     </div>
-    <span class="featured-scroll-hint">3 features</span>
+    <span class="featured-badge">3 features</span>
   </div>
 
   <div class="featured-row">
@@ -1137,12 +517,11 @@
     <!-- Indian Startup Times -->
     <a href="https://www.indianstartuptimes.com/interviews/illuminating-wisdom-for-a-fast-paced-world-the-inspiring-journey-of-aakriti-bansal-and-gita-on-the-go/"
        target="_blank" rel="noopener" class="featured-card">
-      <div class="featured-card-num">01</div>
-      <div class="featured-logo-wrap">
-        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="26" height="26" rx="4" fill="#1C3F6E"/>
-          <text x="13" y="18" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="13" font-weight="700" fill="white" letter-spacing="0.5">IST</text>
-        </svg>
+      <div class="featured-card-top">
+        <div class="featured-logo-box">
+          <img src="images/Indian-startup-logo" alt="Indian Startup Times" />
+        </div>
+        <span class="featured-card-num">01</span>
       </div>
       <p class="featured-pub">Indian Startup Times</p>
       <p class="featured-headline">"Illuminating wisdom for a fast-paced world — the inspiring journey of Aakriti Bansal"</p>
@@ -1152,12 +531,11 @@
     <!-- Women Entrepreneurs Review -->
     <a href="https://www.womenentrepreneursreview.com/leader/aakriti-bansal-driving-brand-growth-by-blending-business-strategy-with-bold-innovative-creative-thinking-vid-5302.html"
        target="_blank" rel="noopener" class="featured-card">
-      <div class="featured-card-num">02</div>
-      <div class="featured-logo-wrap">
-        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="26" height="26" rx="4" fill="#8B2252"/>
-          <text x="13" y="18" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="11" font-weight="700" fill="white" letter-spacing="0.5">WER</text>
-        </svg>
+      <div class="featured-card-top">
+        <div class="featured-logo-box">
+          <img src="images/Women-Entrepreneurs-review-logo" alt="Women Entrepreneurs Review" />
+        </div>
+        <span class="featured-card-num">02</span>
       </div>
       <p class="featured-pub">Women Entrepreneurs Review</p>
       <p class="featured-headline">"Driving brand growth by blending business strategy with bold, innovative creative thinking"</p>
@@ -1167,12 +545,11 @@
     <!-- Rupa Publications -->
     <a href="https://rupapublications.co.in/author-detail/aakriti-bansal"
        target="_blank" rel="noopener" class="featured-card">
-      <div class="featured-card-num">03</div>
-      <div class="featured-logo-wrap">
-        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="26" height="26" rx="4" fill="#FF6B35"/>
-          <text x="13" y="18" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="11" font-weight="700" fill="white" letter-spacing="0.5">RUPA</text>
-        </svg>
+      <div class="featured-card-top">
+        <div class="featured-logo-box">
+          <img src="images/Rupa-logo" alt="Rupa Publications" />
+        </div>
+        <span class="featured-card-num">03</span>
       </div>
       <p class="featured-pub">Rupa Publications</p>
       <p class="featured-headline">"Gita on the Go" — Published Author · 5,000+ copies sold across India</p>
@@ -1193,9 +570,7 @@
       <span id="post-count">0</span> articles published
     </div>
   </div>
-  <div id="posts-container">
-    <!-- Posts rendered by JS -->
-  </div>
+  <div id="posts-container"></div>
   <div class="section-view-all">
     <a href="all-posts.html" class="btn-view-all">Read All Writing <span>→</span></a>
   </div>
@@ -1210,9 +585,7 @@
       <p class="diaries-sub">Raw, honest stories from inside real consulting engagements — the moments no brief captures.</p>
     </div>
   </div>
-  <div id="diaries-container">
-    <!-- Diary posts rendered by JS -->
-  </div>
+  <div id="diaries-container"></div>
   <div class="section-view-all">
     <a href="client-diaries.html" class="btn-view-all" style="border-color:var(--pink);color:var(--pink);">Read All Diaries <span>→</span></a>
   </div>
@@ -1265,10 +638,7 @@
     <img src="images/aakriti.jpg" alt="Aakriti Bansal"
          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
     <div class="founder-img-fallback" style="display:none;">
-      <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="40" cy="30" r="20" fill="#1A1A1A" stroke="#333" stroke-width="1.5"/>
-        <path d="M8 74c0-17.673 14.327-32 32-32s32 14.327 32 32" stroke="#333" stroke-width="1.5" fill="none"/>
-      </svg>
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="30" r="20" fill="#1A1A1A" stroke="#333" stroke-width="1.5"/><path d="M8 74c0-17.673 14.327-32 32-32s32 14.327 32 32" stroke="#333" stroke-width="1.5" fill="none"/></svg>
     </div>
     <div class="founder-img-caption">
       <div class="founder-img-name">Aakriti Bansal</div>
@@ -1281,25 +651,15 @@
     <p class="founder-bio">Aakriti Bansal is a brand strategist, marketing consultant, and published author with over a decade of experience helping businesses find their voice and build audiences that actually care. She founded Naaritive Advisory to bring sharp, research-backed thinking to brands that want to grow with integrity.</p>
     <p class="founder-bio">Her work spans consumer insights, brand positioning, content strategy, and field-level consulting — from boardrooms in Mumbai to kirana shops in Latur. She believes the best marketing is built on deep understanding of people, not platforms.</p>
     <div class="founder-cred-row">
-      <div class="founder-cred">
-        <div class="founder-cred-val">10+</div>
-        <div class="founder-cred-label">Years in Brand Strategy</div>
-      </div>
-      <div class="founder-cred red">
-        <div class="founder-cred-val">5K+</div>
-        <div class="founder-cred-label">Books Sold</div>
-      </div>
-      <div class="founder-cred">
-        <div class="founder-cred-val">3</div>
-        <div class="founder-cred-label">Press Features</div>
-      </div>
+      <div class="founder-cred"><div class="founder-cred-val">10+</div><div class="founder-cred-label">Years in Brand Strategy</div></div>
+      <div class="founder-cred red"><div class="founder-cred-val">5K+</div><div class="founder-cred-label">Books Sold</div></div>
+      <div class="founder-cred"><div class="founder-cred-val">3</div><div class="founder-cred-label">Press Features</div></div>
     </div>
   </div>
 </section>
 
 <!-- PUBLICATIONS -->
 <section id="publications">
-
   <div class="pub-header">
     <div class="pub-header-left">
       <p class="section-label">Published Work</p>
@@ -1307,10 +667,7 @@
     </div>
     <p class="pub-header-sub">Books, case studies, and academic writing that put ideas into the world.</p>
   </div>
-
   <div class="pub-grid">
-
-    <!-- Card 1: Book -->
     <div class="pub-card">
       <span class="pub-type-badge">&#9679;&nbsp; Book</span>
       <div class="pub-publisher-row">
@@ -1319,20 +676,14 @@
         </div>
         <div class="pub-pub-name">Rupa Publications</div>
       </div>
-      <!-- Book cover -->
       <div class="pub-cover-wrap">
-        <img src="images/gita-cover.jpg" alt="Gita on the Go cover"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+        <img src="images/gita-cover.jpg" alt="Gita on the Go cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
         <svg class="pub-cover-svg" style="display:none;" viewBox="0 0 120 168" xmlns="http://www.w3.org/2000/svg">
-          <rect width="120" height="168" fill="#1A0A0A"/>
-          <rect x="0" y="0" width="8" height="168" fill="#FF2D2D"/>
+          <rect width="120" height="168" fill="#1A0A0A"/><rect x="0" y="0" width="8" height="168" fill="#FF2D2D"/>
           <circle cx="60" cy="62" r="28" fill="none" stroke="#FF2D2D" stroke-width="1.5" opacity="0.6"/>
-          <circle cx="60" cy="62" r="18" fill="none" stroke="#FF2D2D" stroke-width="1" opacity="0.4"/>
           <text x="60" y="68" text-anchor="middle" font-family="serif" font-size="22" font-weight="700" fill="#FF2D2D" opacity="0.9">ॐ</text>
           <text x="60" y="108" text-anchor="middle" font-family="serif" font-size="11" font-weight="700" fill="white" letter-spacing="1">Gita on the Go</text>
-          <line x1="30" y1="116" x2="90" y2="116" stroke="#FF2D2D" stroke-width="0.5" opacity="0.5"/>
           <text x="60" y="130" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#888" letter-spacing="2">AAKRITI BANSAL</text>
-          <text x="60" y="155" text-anchor="middle" font-family="sans-serif" font-size="6" fill="#444" letter-spacing="1">RUPA PUBLICATIONS</text>
         </svg>
       </div>
       <h3 class="pub-title"><em>"Gita on the Go"</em></h3>
@@ -1345,8 +696,6 @@
         <a href="https://amzn.in/d/0a8UGXVp" target="_blank" rel="noopener" class="pub-link">View on Amazon →</a>
       </div>
     </div>
-
-    <!-- Card 2: Research Paper -->
     <div class="pub-card">
       <span class="pub-type-badge">&#9679;&nbsp; Research Paper</span>
       <div class="pub-publisher-row">
@@ -1362,11 +711,9 @@
           <div class="pub-meta-label">Authors · Year</div>
           <div class="pub-meta-val">H. Singh, R. K. Aggarwal &amp; <strong>Aakriti Bansal</strong> · 2024</div>
         </div>
-        <a href="https://www.emerald.com/teaching-notes/article-abstract/461325/GMR-grounded-at-the-Maldives-international-airport?redirectedFrom=fulltext"
-           target="_blank" rel="noopener" class="pub-link">Read on Emerald →</a>
+        <a href="https://www.emerald.com/teaching-notes/article-abstract/461325/GMR-grounded-at-the-Maldives-international-airport?redirectedFrom=fulltext" target="_blank" rel="noopener" class="pub-link">Read on Emerald →</a>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -1377,65 +724,51 @@
   <p class="connect-sub">Follow the thinking, join the conversation, or just drop in and say hello.</p>
 
   <div class="social-grid">
-
     <!-- Instagram -->
     <a href="https://www.instagram.com/naaritive?igsh=MXU2YW92b3czbjFmNQ==" target="_blank" rel="noopener" class="social-card instagram">
       <div class="social-icon">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-        </svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
       </div>
-      <div>
+      <div class="social-info">
         <p class="social-platform">Instagram</p>
         <p class="social-handle">@naaritive</p>
         <p class="social-cta">Follow →</p>
       </div>
     </a>
-
     <!-- LinkedIn -->
     <a href="https://www.linkedin.com/in/aakriti-bansal" target="_blank" rel="noopener" class="social-card linkedin">
       <div class="social-icon">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-        </svg>
+        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
       </div>
-      <div>
+      <div class="social-info">
         <p class="social-platform">LinkedIn</p>
         <p class="social-handle">Aakriti Bansal</p>
         <p class="social-cta">Connect →</p>
       </div>
     </a>
-
     <!-- YouTube -->
     <a href="https://youtube.com/@aaakritibansal" target="_blank" rel="noopener" class="social-card youtube">
       <div class="social-icon">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/>
-        </svg>
+        <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
       </div>
-      <div>
+      <div class="social-info">
         <p class="social-platform">YouTube</p>
         <p class="social-handle">@aaakritibansal</p>
         <p class="social-cta">Subscribe →</p>
       </div>
     </a>
-
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- FOOTER — social column removed -->
 <footer>
   <div class="footer-top">
-
-    <!-- Brand col -->
     <div class="footer-brand">
       <div class="footer-brand-logo">
         <img src="images/3.png" alt="Naaritive Logo" class="logo-img">
       </div>
       <p class="footer-tagline">Sharp, honest thinking about brands, audiences, and the stories that actually stick.</p>
     </div>
-
-    <!-- Quick links col -->
     <div>
       <p class="footer-col-title">Explore</p>
       <ul class="footer-links">
@@ -1447,23 +780,6 @@
         <li><a href="#publications">Publications</a></li>
       </ul>
     </div>
-
-    <!-- Social col -->
-    <div>
-      <p class="footer-col-title">Follow Along</p>
-      <div class="footer-social-links">
-        <a href="https://www.instagram.com/naaritive?igsh=MXU2YW92b3czbjFmNQ==" target="_blank" rel="noopener" class="footer-social-link ig">
-          <span class="footer-social-dot"></span>Instagram
-        </a>
-        <a href="https://www.linkedin.com/in/aakriti-bansal" target="_blank" rel="noopener" class="footer-social-link li">
-          <span class="footer-social-dot"></span>LinkedIn
-        </a>
-        <a href="https://youtube.com/@aaakritibansal" target="_blank" rel="noopener" class="footer-social-link yt">
-          <span class="footer-social-dot"></span>YouTube
-        </a>
-      </div>
-    </div>
-
   </div>
   <div class="footer-bottom">
     <p class="footer-copy">© 2026 Naaritive Advisory. All rights reserved.</p>
@@ -1475,7 +791,7 @@
 <div id="article-overlay">
   <div class="article-nav">
     <span class="article-back" onclick="closeArticle()">← Back to Writing</span>
-    <div class="nav-logo">
+    <div class="overlay-logo">
       <span class="naari">Naari</span><span class="tive">tive</span>
     </div>
   </div>
@@ -1483,528 +799,77 @@
     <span class="article-tag" id="art-tag"></span>
     <h1 class="article-headline" id="art-title"></h1>
     <div class="article-meta">
-      <span id="art-date"></span>
-      <span>·</span>
-      <span id="art-readtime"></span>
+      <span id="art-date"></span><span>·</span><span id="art-readtime"></span>
     </div>
     <div class="article-content" id="art-content"></div>
   </div>
 </div>
 
 <script>
-  // ===== CLIENT DIARY POSTS =====
   const CLIENT_DIARY_POSTS = [
-    {
-      id: 'field-visit-latur',
-      title: "What 4 Days in Latur & Solapur Taught Me About Marketing",
-      tag: "Client Diaries",
-      date: "2026-04-01",
-      image: "images/latur-solapur.svg",
-      excerpt: "I was working with an FMCG brand operating in Latur and Solapur. Unlike most consultants, I asked if I could visit the markets with them. They said yes. I flew the same weekend.",
-      content: `Lately, I've been working with an FMCG brand as a marketing consultant, currently operating in Latur and Solapur. Their approach is deeply hyperlocal — not just to build a loyal customer base, but to create meaningful livelihood opportunities for local women farmers.
-
-So, unlike your average consultant, I asked if I could visit the markets of Solapur and Latur with them. At first, they were super surprised but did not express it so explicitly. They enthusiastically agreed and I flew the same weekend.
-
-For four days, I was on the ground — speaking to customers, retailers, women farmers, NGO leaders, and distribution partners.
-
-Observing marketing in action is one thing; experiencing it in context is another. Somewhere between conversations in small kirana stores and chai breaks in village homes, insights turned into relationships.
-
-We barely slept. We travelled through villages, explored local food, and brainstormed late into the night. For the team, this was familiar. For me, it was grounding. It reminded me that strategy looks very different when you're standing in the marketplace instead of an office.
-
-What stayed with me most was the purpose behind it all. A two-fold purpose: to do honest work, and to use my skills in a way that creates tangible impact.
-
-This trip wasn't part of the deliverables. It wasn't in the scope of work. But I've never believed that marketing is just about five posts and three reels a month. I believe in immersion. In understanding the ethos of a brand. In ensuring marketing moves in sync with sales realities, distribution challenges, and real human behaviour.
-
-There's still so much to learn — but experiences like these remind me why I chose to do this work in the first place.`
-    },
-    {
-      id: 'make-it-viral',
-      title: "When a Founder Told Me to 'Just Make It Go Viral'",
-      tag: "Client Diaries",
-      date: "2026-03-18",
-      image: "images/viral-brief.svg",
-      excerpt: "Three slides into the deck, the founder leaned back and said: 'Look, I just need this to go viral.' I've heard this before. But this time, I decided to say something I normally hold back.",
-      content: `Three slides into the discovery deck, the founder leaned back and said it.
-
-"Look, I just need this to go viral."
-
-I've been in enough rooms to know what this really means. It means: I need results fast. It means: I don't have the patience for slow brand building. It means: I've seen other brands blow up overnight and I want that.
-
-It's a reasonable human desire. But it's the wrong brief.
-
-I put the deck down and asked one question: "What do you want to happen after it goes viral?"
-
-Silence.
-
-That's usually where the real conversation begins.
-
-Because virality without strategy is just a spike. A spike that brands celebrate in Week 1 and quietly forget about by Month 3 when the numbers have normalized and nothing has actually changed.
-
-The brands that truly benefit from a viral moment are the ones where the viral content connects to something deeper — a clear positioning, a product that delivers, a community that has reason to stay.
-
-I spent the next hour asking this founder questions they hadn't been asked before. Who is your customer, really? What does a loyal customer look like for you? If you could only keep 100 customers forever, what would they have in common?
-
-By the end of the session, the brief had completely changed.
-
-We weren't making something viral. We were building a reason for the right people to care.
-
-That's a harder, slower, more expensive road. But it's the only one that doesn't dead-end in six weeks.
-
-The best marketing doesn't ask "how do we go viral?" It asks "what are we worth remembering for?"`
-    },
-    {
-      id: 'kirana-pricing-lesson',
-      title: "What a Kirana Owner Taught Me About Premium Pricing",
-      tag: "Client Diaries",
-      date: "2026-03-06",
-      image: "images/kirana-pricing.svg",
-      excerpt: "We were walking through a market in Solapur when I stopped at a kirana store to observe shelf placement. Ten minutes later, I'd completely rethought the pricing strategy I'd presented that morning.",
-      content: `We were about three hours into a market walk in Solapur when I stopped at a kirana store.
-
-I wasn't buying anything. I was just watching. How products were placed. Which ones the owner reached for first when a customer asked for "something for the kitchen." What price points made customers pause vs. reach without hesitation.
-
-I started talking to the owner — a man who had been running this store for 22 years. I asked him about one of the products we were consulting on. It sat on the shelf, premium-priced, in a clean package.
-
-He looked at it for a moment and said: "Yeh toh dikhta accha hai. Par koi poochta nahin."
-
-(It looks nice. But nobody asks for it.)
-
-I asked him why. He shrugged. "Log jaante nahin kya karta hai. Aur itne mein toh doosra le lete hain."
-
-(People don't know what it does. And at this price, they'll just pick something else.)
-
-Two sentences. And the entire pricing strategy I'd presented that morning fell apart in my head.
-
-We had focused so hard on the premium packaging and the margin play that we forgot to answer the most basic question a kirana customer asks before they pick something up: Do I understand this? Do I trust this?
-
-Premium doesn't fail because of price. Premium fails because of unfamiliarity.
-
-The fix wasn't to reduce the price. The fix was to earn the familiarity first — through smaller SKUs, through sampling, through building the habit before asking for the premium.
-
-I've read this in textbooks. But hearing it from a 22-year kirana owner, in the middle of a Solapur market, made it real in a way no case study ever has.
-
-Sometimes the most expensive MBA you can get is a 10-minute conversation in the right shop.`
-    },
-    {
-      id: 'client-cac-lesson',
-      title: "The Client Who Left After We Improved Their Metrics",
-      tag: "Client Diaries",
-      date: "2025-11-01",
-      image: null,
-      excerpt: "I casually asked a new client why he switched from his previous agency to us. His answer changed how I think about client relationships entirely.",
-      content: `I casually asked a new client why he switched from his previous agency to us.
-
-"I just didn't feel the founder was involved anymore."
-
-In our industry, it's almost a default path. You start small, build credibility, get traction. And then as you scale, you naturally start offloading. Founders move from execution to hiring, strategy, and client acquisition. The backend strengthens. The systems grow.
-
-But somewhere in that process, the personal touch that once defined the relationship starts to fade. And clients notice.
-
-It's not that they expect you to write every email or sit on every call. But they remember the person who pitched them. The person they trusted first. When that presence disappears entirely, it feels like something shifted.
-
-I've seen it play out in our own story too. We had a client where we delivered genuinely strong results — CAC dropped significantly, organic reach grew 15x in a month. By any dashboard measure, things were working.
-
-And yet, they moved on.
-
-Because somewhere between the numbers getting better and the relationship getting bigger, the personal connection had thinned. The founder had stepped back. The team was doing great work — but the client missed the human being who had shown up with the original promise.
-
-So now, even as Torchlight grows, I try to stay visible — not in the weeds, but present. I join the first few calls. I set expectations personally. I show up at milestones that matter.
-
-Because at the end of the day, people don't do business with agencies. People do business with people.`
-    },
-    {
-      id: 'missed-targets-may',
-      title: "What Missed Targets in May Actually Taught Us",
-      tag: "Client Diaries",
-      date: "2025-07-05",
-      image: null,
-      excerpt: "We missed the targets in May. It was for a brand we manage on Amazon. And then, instead of pointing fingers, we did something different.",
-      content: `We missed the targets in May.
-
-It was for a brand we manage on Amazon. We've all been there — when the end of the month rolls in and the numbers don't add up. Suddenly, looking at the dashboard feels heavier than ever.
-
-For a moment, the old feeling crept in: frustration, doubt, the temptation to get stuck in what went wrong. Obviously, the blame game started.
-
-But this time, we did something different.
-
-If there's one thing experience has taught me, it's this: getting demotivated is the easiest step. Getting analytical is what actually matters.
-
-So instead of staying lost in the loop, we got proactive.
-
-We pulled up every bit of data — campaign reports, lead sources, client conversations. We sat as a team, asked uncomfortable questions, and dug for the root cause. We analysed every parameter, looked at deeper metrics like revenue share of each product instead of just revenue figures, and identified potential hero SKUs.
-
-It wasn't about pointing fingers. It was about building a clear picture of what needed to change.
-
-By June, the difference was obvious. We jumped to 2x of what we were doing previously.
-
-With just small but focused changes in our strategy and execution, we emerged stronger as a team. And honestly? That turnaround felt better than any "perfect" month.
-
-There's no playbook for how to bounce back — no one really teaches you that. The real win is using what you learn to come back stronger the next time.
-
-So if you're staring at missed targets right now, don't let it stop you. Use it as fuel. You're always just one good truth away from a whole new story.`
-    }
+    { id:'field-visit-latur', title:"What 4 Days in Latur & Solapur Taught Me About Marketing", tag:"Client Diaries", date:"2026-04-01", image:"images/latur-solapur.svg", excerpt:"I was working with an FMCG brand operating in Latur and Solapur. Unlike most consultants, I asked if I could visit the markets with them. They said yes. I flew the same weekend.", content:`Lately, I've been working with an FMCG brand as a marketing consultant, currently operating in Latur and Solapur. Their approach is deeply hyperlocal — not just to build a loyal customer base, but to create meaningful livelihood opportunities for local women farmers.\n\nSo, unlike your average consultant, I asked if I could visit the markets of Solapur and Latur with them. At first, they were super surprised but did not express it so explicitly. They enthusiastically agreed and I flew the same weekend.\n\nFor four days, I was on the ground — speaking to customers, retailers, women farmers, NGO leaders, and distribution partners.\n\nObserving marketing in action is one thing; experiencing it in context is another. Somewhere between conversations in small kirana stores and chai breaks in village homes, insights turned into relationships.\n\nWe barely slept. We travelled through villages, explored local food, and brainstormed late into the night. For the team, this was familiar. For me, it was grounding. It reminded me that strategy looks very different when you're standing in the marketplace instead of an office.\n\nWhat stayed with me most was the purpose behind it all. A two-fold purpose: to do honest work, and to use my skills in a way that creates tangible impact.\n\nThis trip wasn't part of the deliverables. It wasn't in the scope of work. But I've never believed that marketing is just about five posts and three reels a month. I believe in immersion. In understanding the ethos of a brand. In ensuring marketing moves in sync with sales realities, distribution challenges, and real human behaviour.\n\nThere's still so much to learn — but experiences like these remind me why I chose to do this work in the first place.` },
+    { id:'make-it-viral', title:"When a Founder Told Me to 'Just Make It Go Viral'", tag:"Client Diaries", date:"2026-03-18", image:"images/viral-brief.svg", excerpt:"Three slides into the deck, the founder leaned back and said: 'Look, I just need this to go viral.' I've heard this before. But this time, I decided to say something I normally hold back.", content:`Three slides into the discovery deck, the founder leaned back and said it.\n\n"Look, I just need this to go viral."\n\nI've been in enough rooms to know what this really means. It means: I need results fast. It means: I don't have the patience for slow brand building. It means: I've seen other brands blow up overnight and I want that.\n\nIt's a reasonable human desire. But it's the wrong brief.\n\nI put the deck down and asked one question: "What do you want to happen after it goes viral?"\n\nSilence.\n\nThat's usually where the real conversation begins.\n\nBecause virality without strategy is just a spike. A spike that brands celebrate in Week 1 and quietly forget about by Month 3 when the numbers have normalized and nothing has actually changed.\n\nThe brands that truly benefit from a viral moment are the ones where the viral content connects to something deeper — a clear positioning, a product that delivers, a community that has reason to stay.\n\nI spent the next hour asking this founder questions they hadn't been asked before. Who is your customer, really? What does a loyal customer look like for you? If you could only keep 100 customers forever, what would they have in common?\n\nBy the end of the session, the brief had completely changed.\n\nWe weren't making something viral. We were building a reason for the right people to care.\n\nThat's a harder, slower, more expensive road. But it's the only one that doesn't dead-end in six weeks.\n\nThe best marketing doesn't ask "how do we go viral?" It asks "what are we worth remembering for?"` },
+    { id:'kirana-pricing-lesson', title:"What a Kirana Owner Taught Me About Premium Pricing", tag:"Client Diaries", date:"2026-03-06", image:"images/kirana-pricing.svg", excerpt:"We were walking through a market in Solapur when I stopped at a kirana store to observe shelf placement. Ten minutes later, I'd completely rethought the pricing strategy I'd presented that morning.", content:`We were about three hours into a market walk in Solapur when I stopped at a kirana store.\n\nI wasn't buying anything. I was just watching. How products were placed. Which ones the owner reached for first when a customer asked for "something for the kitchen." What price points made customers pause vs. reach without hesitation.\n\nI started talking to the owner — a man who had been running this store for 22 years. I asked him about one of the products we were consulting on. It sat on the shelf, premium-priced, in a clean package.\n\nHe looked at it for a moment and said: "Yeh toh dikhta accha hai. Par koi poochta nahin."\n\n(It looks nice. But nobody asks for it.)\n\nI asked him why. He shrugged. "Log jaante nahin kya karta hai. Aur itne mein toh doosra le lete hain."\n\n(People don't know what it does. And at this price, they'll just pick something else.)\n\nTwo sentences. And the entire pricing strategy I'd presented that morning fell apart in my head.\n\nWe had focused so hard on the premium packaging and the margin play that we forgot to answer the most basic question a kirana customer asks before they pick something up: Do I understand this? Do I trust this?\n\nPremium doesn't fail because of price. Premium fails because of unfamiliarity.\n\nThe fix wasn't to reduce the price. The fix was to earn the familiarity first — through smaller SKUs, through sampling, through building the habit before asking for the premium.\n\nI've read this in textbooks. But hearing it from a 22-year kirana owner, in the middle of a Solapur market, made it real in a way no case study ever has.\n\nSometimes the most expensive MBA you can get is a 10-minute conversation in the right shop.` },
+    { id:'client-cac-lesson', title:"The Client Who Left After We Improved Their Metrics", tag:"Client Diaries", date:"2025-11-01", image:null, excerpt:"I casually asked a new client why he switched from his previous agency to us. His answer changed how I think about client relationships entirely.", content:`I casually asked a new client why he switched from his previous agency to us.\n\n"I just didn't feel the founder was involved anymore."\n\nIn our industry, it's almost a default path. You start small, build credibility, get traction. And then as you scale, you naturally start offloading. Founders move from execution to hiring, strategy, and client acquisition. The backend strengthens. The systems grow.\n\nBut somewhere in that process, the personal touch that once defined the relationship starts to fade. And clients notice.\n\nIt's not that they expect you to write every email or sit on every call. But they remember the person who pitched them. The person they trusted first. When that presence disappears entirely, it feels like something shifted.\n\nI've seen it play out in our own story too. We had a client where we delivered genuinely strong results — CAC dropped significantly, organic reach grew 15x in a month. By any dashboard measure, things were working.\n\nAnd yet, they moved on.\n\nBecause somewhere between the numbers getting better and the relationship getting bigger, the personal connection had thinned. The founder had stepped back. The team was doing great work — but the client missed the human being who had shown up with the original promise.\n\nSo now, even as Torchlight grows, I try to stay visible — not in the weeds, but present. I join the first few calls. I set expectations personally. I show up at milestones that matter.\n\nBecause at the end of the day, people don't do business with agencies. People do business with people.` },
+    { id:'missed-targets-may', title:"What Missed Targets in May Actually Taught Us", tag:"Client Diaries", date:"2025-07-05", image:null, excerpt:"We missed the targets in May. It was for a brand we manage on Amazon. And then, instead of pointing fingers, we did something different.", content:`We missed the targets in May.\n\nIt was for a brand we manage on Amazon. We've all been there — when the end of the month rolls in and the numbers don't add up. Suddenly, looking at the dashboard feels heavier than ever.\n\nFor a moment, the old feeling crept in: frustration, doubt, the temptation to get stuck in what went wrong. Obviously, the blame game started.\n\nBut this time, we did something different.\n\nIf there's one thing experience has taught me, it's this: getting demotivated is the easiest step. Getting analytical is what actually matters.\n\nSo instead of staying lost in the loop, we got proactive.\n\nWe pulled up every bit of data — campaign reports, lead sources, client conversations. We sat as a team, asked uncomfortable questions, and dug for the root cause. We analysed every parameter, looked at deeper metrics like revenue share of each product instead of just revenue figures, and identified potential hero SKUs.\n\nIt wasn't about pointing fingers. It was about building a clear picture of what needed to change.\n\nBy June, the difference was obvious. We jumped to 2x of what we were doing previously.\n\nWith just small but focused changes in our strategy and execution, we emerged stronger as a team. And honestly? That turnaround felt better than any "perfect" month.\n\nThere's no playbook for how to bounce back — no one really teaches you that. The real win is using what you learn to come back stronger the next time.\n\nSo if you're staring at missed targets right now, don't let it stop you. Use it as fuel. You're always just one good truth away from a whole new story.` }
   ];
 
-  // ===== STATIC POSTS =====
   const STATIC_POSTS = [
-    {
-      id: 'mcd-ramadan',
-      title: "McD Campaigns are a Masterclass for Marketers",
-      tag: "Brand Strategy",
-      date: "2026-04-08",
-      image: "images/mcd-campaign.svg",
-      excerpt: "On the occasion of Ramadan in Germany, McDonald's used a digital billboard in the simplest way possible. During the day, the screen showed an empty fries box. At night, around iftar time — it appeared filled.",
-      content: `There is a reason we marketers love McDonald's campaigns. And yet, they proved it again.
-
-On the occasion of Ramadan in Germany, McDonald's used a digital billboard in the simplest way possible. During the day, the screen showed an empty fries box.
-
-And at night, around the time people break their fast, the same box appeared filled with fries.
-
-That's the entire idea.
-
-But the brilliance lies in what it signals.
-
-During the day, people observing Ramadan don't eat. So the brand chose silence. At night, when iftar begins, the communication becomes relevant. The billboard didn't interrupt culture. It aligned itself with it.
-
-From a brand perspective, this is behavioural intelligence.
-
-It shows restraint, timing and more importantly, it shows respect.
-
-Many brands try to participate in festivals by changing colours or adding symbolic visuals. McDonald's instead reflected lived experience. The empty box during fasting hours was not just a creative choice. It was empathy in design.
-
-This is why such campaigns travel and feel understood.
-
-In an era where brands constantly compete for attention, McDonald's reminds us that sometimes attention comes when you speak less and mean more.
-
-That is what cultural integration should look like.`
-    },
-    {
-      id: 'anti-ai-marketing',
-      title: "Some Big Brands are going Anti-AI Marketing — Is the bubble gonna burst?",
-      tag: "Marketing",
-      date: "2026-04-05",
-      image: "images/anti-ai.jpg",
-      excerpt: "Whenever an entire market rushes in one direction, suddenly it becomes the norm. After the AI boom of 2025, brands sprinted toward hyper-efficiency. But some brands understood something the others didn't.",
-      content: `Whenever an entire market rushes in one direction, suddenly it becomes the norm.
-
-After the AI boom of 2025, brands sprinted toward hyper-efficiency.
-AI product shoots.
-AI models.
-AI-generated perfection.
-
-Everything looked sharp. Clean. Flawless.
-
-But it did the same for everyone because everyone has access to the same tools.
-
-And if you'd understand AI correctly, it has never been about making you a differentiator. The work of an AI model is to bring everything to an average — not the quality average but the mathematical one, the mean.
-
-So when everyone is using the same tool, giving the same inputs for similar kinds of work, the output is going to be consistent across.
-
-It becomes the baseline.
-
-And some brands understood that. So they started competing on contrast.
-
-These brands are choosing friction over polish. Texture over smoothness. Story over symmetry.
-
-They're leaning into the visible human touch of hand drawings and real voices.
-
-That's the contradiction. And from a strategy lens, this makes complete sense.
-
-When everyone zigged toward optimization, zagging toward originality became the premium move.
-
-This isn't about being anti-AI.
-
-It's about understanding that tools democratize output — but they don't create distinctiveness.
-
-Distinctiveness comes from choices.
-
-And sometimes the most powerful brand move isn't adopting the newest wave.
-
-It's resisting it — visibly.`
-    },
-    {
-      id: 'starbucks-round-tables',
-      title: "The One Small Change That Quietly Increased Starbucks' AOV",
-      tag: "Brand Strategy",
-      date: "2026-03-28",
-      image: "images/starbucks.jpg",
-      excerpt: "Starbucks saw that most café customers came alone, and solo customers left faster. That empty chair across a square table? It subconsciously feels like someone is missing. So they replaced every one.",
-      content: `It's always the small details that change the complete dynamics of a business. This Round table vs. Square table is one such detail.
-
-Starbucks saw that most café customers came alone and solo customers left faster. That empty chair across a square table? It subconsciously feels like someone is missing.
-
-They finished their coffee and moved on. Starbucks understood this. That's when they replaced them with round tables.
-
-No seat directly "across."
-No visual reminder of absence.
-No subtle loneliness trigger.
-
-Round tables also remove hierarchy — there's no head of the table. Groups feel equal and the conversations flow more naturally.
-
-Even from a neuroscience angle, curves matter. Sharp edges subtly increase alertness. Rounded shapes feel safer and more organic. Relaxed customers stay longer and longer stay = higher average order value.
-
-As a consultant, this is what fascinates me. The best brands don't just optimise ads, they optimise experience physics.
-
-They ask:
-Where does friction exist?
-What silent signals are we sending?
-What is making people leave earlier than they should?
-
-Sometimes the answer isn't in your marketing budget. It's always in understanding your customer's unsaid needs.`
-    },
-    {
-      id: 'bumble-case-study',
-      title: "Bumble: 0/10 Budget · 10/10 Execution",
-      tag: "Growth",
-      date: "2026-03-22",
-      image: "images/bumble.jpg",
-      excerpt: "In the early days of Bumble, they didn't run massive ad campaigns. They ran attention experiments. At universities, they put up posters that said: No Facebook. No Instagram. No Snapchat. No Bumble.",
-      content: `Ridiculously awesome marketing moves built this brand. In the early days of Bumble, they didn't run massive ad campaigns. They ran attention experiments.
-
-At universities, they put up posters that said:
-
-No Facebook. No Instagram. No Snapchat. No Bumble.
-
-Think about that. By saying "No Bumble" next to giants like Facebook and Instagram, they placed themselves in the same mental category.
-
-The association created legitimacy — but they didn't stop there. They would plant students wearing Bumble T-shirts to enter lecture halls 15 minutes late.
-
-A class of 300. Dead silent. And everyone looks up to the bright yellow shirt with one word on it: Bumble.
-
-That's attention engineering to the peak.
-
-From a consulting perspective, this is what most brands miss.
-
-Virality doesn't come from boosting posts — it comes from moments.
-
-If you're building a brand and want creative thinking beyond ads and algorithms, this is the playbook to study.
-
-The best growth isn't bought. It's engineered through the right moments, in the right rooms, at the right time.`
-    },
-    {
-      id: 'tommy-hilfiger-billboard',
-      title: "The Billboard That Made Tommy Hilfiger",
-      tag: "Marketing",
-      date: "2026-02-05",
-      image: "images/tommy-hilfiger.svg",
-      excerpt: "In 1985, Tommy Hilfiger was unknown. No legacy, no fashion house backing him. So instead of waiting to earn credibility, he decided to manufacture it.",
-      content: `In 1985, Tommy Hilfiger was unknown. Just started. No legacy. No fashion house backing him. No reason for New York to care.
-
-He was just a young designer launching his first men's clothing line.
-
-But instead of waiting to earn credibility, he decided to manufacture it. Along with his marketing partner, George Lois, he rented a massive billboard in Times Square. It named him alongside Ralph Lauren, Perry Ellis, and Calvin Klein — the four great American designers. The twist? Most New Yorkers had no idea who Tommy Hilfiger was. And that was the point.
-
-The association did the work. If he was being named alongside Ralph Lauren and Calvin Klein, people assumed he belonged there.
-
-Within months, Tommy Hilfiger was everywhere: department stores, magazine covers, TV, pop culture. He wasn't just selling clothes — he was selling identity, aspiration, and belonging.
-
-That's the real lesson here. Markets don't always wait for proof. They respond to confidence, context, and positioning. If people believe you belong at the top, they'll treat you like you do.
-
-Perception doesn't replace a product. But it often opens the door long before a product gets a chance. And once that door opens, everything else moves faster.`
-    },
-    {
-      id: 'nescafe-japan',
-      title: "How Nescafé Conquered a Tea Nation",
-      tag: "Brand Strategy",
-      date: "2025-06-05",
-      image: "images/nescafe-japan.svg",
-      excerpt: "Japan wasn't a coffee-drinking country. For decades, it was a proud tea nation. Coffee was bitter, Western, and rushed. So Nestlé flipped the script entirely.",
-      content: `Japan wasn't a coffee-drinking country. For decades, it was a proud tea nation. Coffee was seen as bitter, Western, and rushed — nothing like the calm, ritual-driven Japanese tea culture.
-
-Nestlé tried everything: ads, discounts, vending machines. Nothing worked.
-
-So they flipped the script. They hired a child psychologist, Dr. Clotaire Rapaille, whose insight was brutal but brilliant: "You don't sell habits. You build them."
-
-Japan didn't have an emotional memory of coffee. So Nestlé created one.
-
-They launched coffee-flavoured candies. Coffee-scented pencils for kids. TV ads that showed children waking up to the smell of coffee at home. The goal wasn't to sell coffee. The goal was to make coffee feel like childhood — warm, familiar, safe.
-
-Years later, those kids grew up. And to them, coffee wasn't bitter anymore. It was comfort.
-
-By the 2000s, Japan became obsessed. Cold coffee in cans (a Japanese invention) took over vending machines. Coffee shops became a lifestyle. Per-person consumption jumped to 3.5 kg and Nestlé captured almost 60% of the entire market.
-
-A $30 billion category built on psychology, not product.
-
-This is the part most brands miss: people don't fall in love with what you sell. They fall in love with how it makes them feel. If you can shape the emotion, the habit follows.`
-    },
-    {
-      id: 'decoy-effect-upgrade',
-      title: "The Psychological Trick That Makes You Upgrade Every Time",
-      tag: "Marketing",
-      date: "2025-10-05",
-      image: null,
-      excerpt: "Ever walked into a movie theatre planning to get a small popcorn — and walked out with the biggest tub? That's not hunger. That's the Decoy Effect.",
-      content: `Ever walked into a movie theatre, planning to get a small popcorn — and walked out with the biggest tub?
-
-That's not hunger. That's the Decoy Effect working on you.
-
-Movie popcorn: Small ₹100. Medium ₹180. Large ₹200. You weren't even thinking of buying the Large. But now, compared to the ₹180 medium, ₹200 for a Large seems like a steal. The Medium is the decoy — it's not priced to sell, it's priced to push you toward the Large.
-
-Netflix does the same. Basic: ₹199. Standard: ₹499. Premium: ₹649. The Basic feels too basic. The Premium feels too expensive. Suddenly, Standard feels just right. That "just right" feeling? It's engineered.
-
-McDonald's does it too. Burger ₹90. Burger + Fries ₹130. Burger + Fries + Coke ₹140. The ₹130 offer exists to make the ₹140 combo irresistible.
-
-The Decoy Effect isn't about adding options. It's about shaping decisions. Smart brands don't just price for profit. They price for perception.
-
-The next time you're structuring your pricing tiers, don't just think about what you want to sell. Think about what you want customers to compare it to. That comparison does most of the selling for you.`
-    },
-    {
-      id: 'labubu-stanley-matcha',
-      title: "What Labubu, Stanley Mugs & Matcha Had in Common",
-      tag: "Consumer Insights",
-      date: "2025-11-15",
-      image: null,
-      excerpt: "Three completely different things — yet all three were everywhere in 2025. None of them revolutionary. None solving a big problem. But they created insane hype. Why?",
-      content: `Labubu dolls. Stanley mugs. Matcha. Three completely different things. Yet all three were everywhere in 2025.
-
-And it made me think: why these? None of them are revolutionary. None of them are solving a big problem. But they created insane hype.
-
-With Labubu, it wasn't about the doll. It was about being "in on something." Slightly weird. Slightly artsy. Limited drops.
-
-Stanley mugs weren't about hydration either. They became part of daily life. Once enough people around you had one, not having it felt odd.
-
-And matcha? It wasn't new at all. It was just positioned beautifully. Coffee became hustle. Matcha became balanced. Calm mornings. Slower living. Intentional choices.
-
-Different products. Same psychology. All three worked because they weren't just things you bought. They were things you showed. They fit into routines. They looked good on camera. And over time, they became part of identity.
-
-That's the real common thread. Hype in 2025 wasn't driven by features or innovation. It was driven by how a product made people feel about themselves.
-
-People don't share products anymore. They share signals. If you're building a brand today, this is the real question: What does using your product say about the person using it?`
-    },
-    {
-      id: 'coca-cola-santa-red',
-      title: "What Coca-Cola Actually Did to Santa Claus",
-      tag: "Marketing",
-      date: "2025-12-10",
-      image: null,
-      excerpt: "\"Santa used to wear green. Coca-Cola made him red.\" A great story — but not fully true. What Coca-Cola actually did was rarer and more instructive.",
-      content: `If you are a true marketer, you've probably heard this: "Santa used to wear green. Coca-Cola made him red."
-
-It's a great story — but it's also not fully true.
-
-Santa's outfit wasn't originally one colour. He showed up in different styles and colours across centuries depending on the country and the artist. Red shows up long before Coca-Cola.
-
-So what did Coca-Cola actually do? They didn't invent the red Santa. They standardised him.
-
-In 1931, Coca-Cola hired illustrator Haddon Sundblom and ran Christmas ads for decades. Those visuals travelled globally and basically "locked in" the modern, warm, jolly, red-suited Santa in the public imagination.
-
-That's the marketing lesson people miss: you don't have to create a symbol. You just have to own the most repeated version of it.
-
-Coca-Cola got into the heads of consumers by doing three things brilliantly. Consistency: same Santa vibe, year after year, for decades. Association: Santa + warmth + togetherness + Coke in winter. Cultural distribution: the campaign was so widespread it became the default mental image.
-
-So no, Coca-Cola didn't change Santa from green to red. But yes, they pulled off something rarer: they made their Santa the Santa you see in your head.
-
-Ownership isn't about origination. It's about repetition. The brand that shows up most consistently in the most emotionally resonant moments — that's the brand that gets remembered.`
-    },
-    {
-      id: 'kabaan-cac-case-study',
-      title: "How We Halved a D2C Brand's CAC in 8 Weeks",
-      tag: "Growth",
-      date: "2025-10-20",
-      image: null,
-      excerpt: "When we onboarded this D2C brand, their CAC was ₹1,400. Within 8 weeks, we brought it down to sub-₹750. Here's the exact system — and the uncomfortable truth about D2C growth.",
-      content: `When we onboarded this D2C brand two months ago, their CAC was ₹1,400. Within 8 weeks, we brought it down to sub-₹750.
-
-Cutting CAC by ~47% isn't "just optimisation." It's proof that the system — ads, creatives, website, and top-of-funnel — finally started talking to each other.
-
-Here's what actually moved the needle.
-
-Step 1: Sharper Targeting. We stopped reaching "everyone." We went after people who had shown real buying signals. CTR climbed to 3% and traffic finally felt relevant.
-
-Step 2: Creative Testing. We stopped optimising for what looks premium and doubled down on what was converting. Clear problem-solution framing. Benefit-first messaging. Less polish, more honesty. In D2C, raw clarity beats pretty ambiguity almost every time.
-
-Step 3: Website Hygiene. No fancy redesigns — just fundamentals. Faster load times, smoother checkout, cleaner user flow. These don't show up as "wins" on ad dashboards — but they quietly improve conversion efficiency across every channel.
-
-Step 4: Community-Led Awareness. Impressions went from 4 lakh to 70 lakh in a month. That did two things: it strengthened top-of-funnel without paid inflation, and made retargeting cheaper and more effective. Organic reach is not vanity — it's CAC insurance.
-
-The uncomfortable truth: lower CAC is a leading indicator — scale is a lagging outcome. If you expect instant order spikes without letting the system breathe, you'll keep switching agencies while resetting progress.`
-    }
+    { id:'mcd-ramadan', title:"McD Campaigns are a Masterclass for Marketers", tag:"Brand Strategy", date:"2026-04-08", image:"images/mcd-campaign.svg", excerpt:"On the occasion of Ramadan in Germany, McDonald's used a digital billboard in the simplest way possible. During the day, the screen showed an empty fries box. At night, around iftar time — it appeared filled.", content:`There is a reason we marketers love McDonald's campaigns. And yet, they proved it again.\n\nOn the occasion of Ramadan in Germany, McDonald's used a digital billboard in the simplest way possible. During the day, the screen showed an empty fries box.\n\nAnd at night, around the time people break their fast, the same box appeared filled with fries.\n\nThat's the entire idea.\n\nBut the brilliance lies in what it signals.\n\nDuring the day, people observing Ramadan don't eat. So the brand chose silence. At night, when iftar begins, the communication becomes relevant. The billboard didn't interrupt culture. It aligned itself with it.\n\nFrom a brand perspective, this is behavioural intelligence.\n\nIt shows restraint, timing and more importantly, it shows respect.\n\nMany brands try to participate in festivals by changing colours or adding symbolic visuals. McDonald's instead reflected lived experience. The empty box during fasting hours was not just a creative choice. It was empathy in design.\n\nThis is why such campaigns travel and feel understood.\n\nIn an era where brands constantly compete for attention, McDonald's reminds us that sometimes attention comes when you speak less and mean more.\n\nThat is what cultural integration should look like.` },
+    { id:'anti-ai-marketing', title:"Some Big Brands are going Anti-AI Marketing — Is the bubble gonna burst?", tag:"Marketing", date:"2026-04-05", image:"images/anti-ai.jpg", excerpt:"Whenever an entire market rushes in one direction, suddenly it becomes the norm. After the AI boom of 2025, brands sprinted toward hyper-efficiency. But some brands understood something the others didn't.", content:`Whenever an entire market rushes in one direction, suddenly it becomes the norm.\n\nAfter the AI boom of 2025, brands sprinted toward hyper-efficiency.\nAI product shoots.\nAI models.\nAI-generated perfection.\n\nEverything looked sharp. Clean. Flawless.\n\nBut it did the same for everyone because everyone has access to the same tools.\n\nAnd if you'd understand AI correctly, it has never been about making you a differentiator. The work of an AI model is to bring everything to an average — not the quality average but the mathematical one, the mean.\n\nSo when everyone is using the same tool, giving the same inputs for similar kinds of work, the output is going to be consistent across.\n\nIt becomes the baseline.\n\nAnd some brands understood that. So they started competing on contrast.\n\nThese brands are choosing friction over polish. Texture over smoothness. Story over symmetry.\n\nThey're leaning into the visible human touch of hand drawings and real voices.\n\nThat's the contradiction. And from a strategy lens, this makes complete sense.\n\nWhen everyone zigged toward optimization, zagging toward originality became the premium move.\n\nThis isn't about being anti-AI.\n\nIt's about understanding that tools democratize output — but they don't create distinctiveness.\n\nDistinctiveness comes from choices.\n\nAnd sometimes the most powerful brand move isn't adopting the newest wave.\n\nIt's resisting it — visibly.` },
+    { id:'starbucks-round-tables', title:"The One Small Change That Quietly Increased Starbucks' AOV", tag:"Brand Strategy", date:"2026-03-28", image:"images/starbucks.jpg", excerpt:"Starbucks saw that most café customers came alone, and solo customers left faster. That empty chair across a square table? It subconsciously feels like someone is missing. So they replaced every one.", content:`It's always the small details that change the complete dynamics of a business. This Round table vs. Square table is one such detail.\n\nStarbucks saw that most café customers came alone and solo customers left faster. That empty chair across a square table? It subconsciously feels like someone is missing.\n\nThey finished their coffee and moved on. Starbucks understood this. That's when they replaced them with round tables.\n\nNo seat directly "across."\nNo visual reminder of absence.\nNo subtle loneliness trigger.\n\nRound tables also remove hierarchy — there's no head of the table. Groups feel equal and the conversations flow more naturally.\n\nEven from a neuroscience angle, curves matter. Sharp edges subtly increase alertness. Rounded shapes feel safer and more organic. Relaxed customers stay longer and longer stay = higher average order value.\n\nAs a consultant, this is what fascinates me. The best brands don't just optimise ads, they optimise experience physics.\n\nThey ask:\nWhere does friction exist?\nWhat silent signals are we sending?\nWhat is making people leave earlier than they should?\n\nSometimes the answer isn't in your marketing budget. It's always in understanding your customer's unsaid needs.` },
+    { id:'bumble-case-study', title:"Bumble: 0/10 Budget · 10/10 Execution", tag:"Growth", date:"2026-03-22", image:"images/bumble.jpg", excerpt:"In the early days of Bumble, they didn't run massive ad campaigns. They ran attention experiments. At universities, they put up posters that said: No Facebook. No Instagram. No Snapchat. No Bumble.", content:`Ridiculously awesome marketing moves built this brand. In the early days of Bumble, they didn't run massive ad campaigns. They ran attention experiments.\n\nAt universities, they put up posters that said:\n\nNo Facebook. No Instagram. No Snapchat. No Bumble.\n\nThink about that. By saying "No Bumble" next to giants like Facebook and Instagram, they placed themselves in the same mental category.\n\nThe association created legitimacy — but they didn't stop there. They would plant students wearing Bumble T-shirts to enter lecture halls 15 minutes late.\n\nA class of 300. Dead silent. And everyone looks up to the bright yellow shirt with one word on it: Bumble.\n\nThat's attention engineering to the peak.\n\nFrom a consulting perspective, this is what most brands miss.\n\nVirality doesn't come from boosting posts — it comes from moments.\n\nIf you're building a brand and want creative thinking beyond ads and algorithms, this is the playbook to study.\n\nThe best growth isn't bought. It's engineered through the right moments, in the right rooms, at the right time.` },
+    { id:'tommy-hilfiger-billboard', title:"The Billboard That Made Tommy Hilfiger", tag:"Marketing", date:"2026-02-05", image:"images/tommy-hilfiger.svg", excerpt:"In 1985, Tommy Hilfiger was unknown. No legacy, no fashion house backing him. So instead of waiting to earn credibility, he decided to manufacture it.", content:`In 1985, Tommy Hilfiger was unknown. Just started. No legacy. No fashion house backing him. No reason for New York to care.\n\nHe was just a young designer launching his first men's clothing line.\n\nBut instead of waiting to earn credibility, he decided to manufacture it. Along with his marketing partner, George Lois, he rented a massive billboard in Times Square. It named him alongside Ralph Lauren, Perry Ellis, and Calvin Klein — the four great American designers. The twist? Most New Yorkers had no idea who Tommy Hilfiger was. And that was the point.\n\nThe association did the work. If he was being named alongside Ralph Lauren and Calvin Klein, people assumed he belonged there.\n\nWithin months, Tommy Hilfiger was everywhere: department stores, magazine covers, TV, pop culture. He wasn't just selling clothes — he was selling identity, aspiration, and belonging.\n\nThat's the real lesson here. Markets don't always wait for proof. They respond to confidence, context, and positioning. If people believe you belong at the top, they'll treat you like you do.\n\nPerception doesn't replace a product. But it often opens the door long before a product gets a chance. And once that door opens, everything else moves faster.` },
+    { id:'nescafe-japan', title:"How Nescafé Conquered a Tea Nation", tag:"Brand Strategy", date:"2025-06-05", image:"images/nescafe-japan.svg", excerpt:"Japan wasn't a coffee-drinking country. For decades, it was a proud tea nation. Coffee was bitter, Western, and rushed. So Nestlé flipped the script entirely.", content:`Japan wasn't a coffee-drinking country. For decades, it was a proud tea nation. Coffee was seen as bitter, Western, and rushed — nothing like the calm, ritual-driven Japanese tea culture.\n\nNestlé tried everything: ads, discounts, vending machines. Nothing worked.\n\nSo they flipped the script. They hired a child psychologist, Dr. Clotaire Rapaille, whose insight was brutal but brilliant: "You don't sell habits. You build them."\n\nJapan didn't have an emotional memory of coffee. So Nestlé created one.\n\nThey launched coffee-flavoured candies. Coffee-scented pencils for kids. TV ads that showed children waking up to the smell of coffee at home. The goal wasn't to sell coffee. The goal was to make coffee feel like childhood — warm, familiar, safe.\n\nYears later, those kids grew up. And to them, coffee wasn't bitter anymore. It was comfort.\n\nBy the 2000s, Japan became obsessed. Cold coffee in cans (a Japanese invention) took over vending machines. Coffee shops became a lifestyle. Per-person consumption jumped to 3.5 kg and Nestlé captured almost 60% of the entire market.\n\nA $30 billion category built on psychology, not product.\n\nThis is the part most brands miss: people don't fall in love with what you sell. They fall in love with how it makes them feel. If you can shape the emotion, the habit follows.` },
+    { id:'decoy-effect-upgrade', title:"The Psychological Trick That Makes You Upgrade Every Time", tag:"Marketing", date:"2025-10-05", image:null, excerpt:"Ever walked into a movie theatre planning to get a small popcorn — and walked out with the biggest tub? That's not hunger. That's the Decoy Effect.", content:`Ever walked into a movie theatre, planning to get a small popcorn — and walked out with the biggest tub?\n\nThat's not hunger. That's the Decoy Effect working on you.\n\nMovie popcorn: Small ₹100. Medium ₹180. Large ₹200. You weren't even thinking of buying the Large. But now, compared to the ₹180 medium, ₹200 for a Large seems like a steal. The Medium is the decoy — it's not priced to sell, it's priced to push you toward the Large.\n\nNetflix does the same. Basic: ₹199. Standard: ₹499. Premium: ₹649. The Basic feels too basic. The Premium feels too expensive. Suddenly, Standard feels just right. That "just right" feeling? It's engineered.\n\nMcDonald's does it too. Burger ₹90. Burger + Fries ₹130. Burger + Fries + Coke ₹140. The ₹130 offer exists to make the ₹140 combo irresistible.\n\nThe Decoy Effect isn't about adding options. It's about shaping decisions. Smart brands don't just price for profit. They price for perception.\n\nThe next time you're structuring your pricing tiers, don't just think about what you want to sell. Think about what you want customers to compare it to. That comparison does most of the selling for you.` },
+    { id:'labubu-stanley-matcha', title:"What Labubu, Stanley Mugs & Matcha Had in Common", tag:"Consumer Insights", date:"2025-11-15", image:null, excerpt:"Three completely different things — yet all three were everywhere in 2025. None of them revolutionary. None solving a big problem. But they created insane hype. Why?", content:`Labubu dolls. Stanley mugs. Matcha. Three completely different things. Yet all three were everywhere in 2025.\n\nAnd it made me think: why these? None of them are revolutionary. None of them are solving a big problem. But they created insane hype.\n\nWith Labubu, it wasn't about the doll. It was about being "in on something." Slightly weird. Slightly artsy. Limited drops.\n\nStanley mugs weren't about hydration either. They became part of daily life. Once enough people around you had one, not having it felt odd.\n\nAnd matcha? It wasn't new at all. It was just positioned beautifully. Coffee became hustle. Matcha became balanced. Calm mornings. Slower living. Intentional choices.\n\nDifferent products. Same psychology. All three worked because they weren't just things you bought. They were things you showed. They fit into routines. They looked good on camera. And over time, they became part of identity.\n\nThat's the real common thread. Hype in 2025 wasn't driven by features or innovation. It was driven by how a product made people feel about themselves.\n\nPeople don't share products anymore. They share signals. If you're building a brand today, this is the real question: What does using your product say about the person using it?` },
+    { id:'coca-cola-santa-red', title:"What Coca-Cola Actually Did to Santa Claus", tag:"Marketing", date:"2025-12-10", image:null, excerpt:"\"Santa used to wear green. Coca-Cola made him red.\" A great story — but not fully true. What Coca-Cola actually did was rarer and more instructive.", content:`If you are a true marketer, you've probably heard this: "Santa used to wear green. Coca-Cola made him red."\n\nIt's a great story — but it's also not fully true.\n\nSanta's outfit wasn't originally one colour. He showed up in different styles and colours across centuries depending on the country and the artist. Red shows up long before Coca-Cola.\n\nSo what did Coca-Cola actually do? They didn't invent the red Santa. They standardised him.\n\nIn 1931, Coca-Cola hired illustrator Haddon Sundblom and ran Christmas ads for decades. Those visuals travelled globally and basically "locked in" the modern, warm, jolly, red-suited Santa in the public imagination.\n\nThat's the marketing lesson people miss: you don't have to create a symbol. You just have to own the most repeated version of it.\n\nCoca-Cola got into the heads of consumers by doing three things brilliantly. Consistency: same Santa vibe, year after year, for decades. Association: Santa + warmth + togetherness + Coke in winter. Cultural distribution: the campaign was so widespread it became the default mental image.\n\nSo no, Coca-Cola didn't change Santa from green to red. But yes, they pulled off something rarer: they made their Santa the Santa you see in your head.\n\nOwnership isn't about origination. It's about repetition. The brand that shows up most consistently in the most emotionally resonant moments — that's the brand that gets remembered.` },
+    { id:'kabaan-cac-case-study', title:"How We Halved a D2C Brand's CAC in 8 Weeks", tag:"Growth", date:"2025-10-20", image:null, excerpt:"When we onboarded this D2C brand, their CAC was ₹1,400. Within 8 weeks, we brought it down to sub-₹750. Here's the exact system — and the uncomfortable truth about D2C growth.", content:`When we onboarded this D2C brand two months ago, their CAC was ₹1,400. Within 8 weeks, we brought it down to sub-₹750.\n\nCutting CAC by ~47% isn't "just optimisation." It's proof that the system — ads, creatives, website, and top-of-funnel — finally started talking to each other.\n\nHere's what actually moved the needle.\n\nStep 1: Sharper Targeting. We stopped reaching "everyone." We went after people who had shown real buying signals. CTR climbed to 3% and traffic finally felt relevant.\n\nStep 2: Creative Testing. We stopped optimising for what looks premium and doubled down on what was converting. Clear problem-solution framing. Benefit-first messaging. Less polish, more honesty. In D2C, raw clarity beats pretty ambiguity almost every time.\n\nStep 3: Website Hygiene. No fancy redesigns — just fundamentals. Faster load times, smoother checkout, cleaner user flow. These don't show up as "wins" on ad dashboards — but they quietly improve conversion efficiency across every channel.\n\nStep 4: Community-Led Awareness. Impressions went from 4 lakh to 70 lakh in a month. That did two things: it strengthened top-of-funnel without paid inflation, and made retargeting cheaper and more effective. Organic reach is not vanity — it's CAC insurance.\n\nThe uncomfortable truth: lower CAC is a leading indicator — scale is a lagging outcome. If you expect instant order spikes without letting the system breathe, you'll keep switching agencies while resetting progress.` }
   ];
 
-  // ===== DATA =====
-  function getPosts() {
-    return [...STATIC_POSTS].sort((a, b) => new Date(b.date) - new Date(a.date));
-  }
+  function getPosts() { return [...STATIC_POSTS].sort((a,b) => new Date(b.date)-new Date(a.date)); }
+  function readTime(text) { return Math.max(1,Math.ceil((text||'').split(/\s+/).length/200))+' min read'; }
+  function formatDate(d) { if(!d) return ''; return new Date(d+'T00:00:00').toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'}); }
 
-  function readTime(text) {
-    const words = (text || '').split(/\s+/).length;
-    const mins = Math.max(1, Math.ceil(words / 200));
-    return mins + ' min read';
-  }
-
-  function formatDate(dateStr) {
-    if (!dateStr) return '';
-    const d = new Date(dateStr + 'T00:00:00');
-    return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
-  }
-
-  // ===== RENDER HELPERS =====
   function postCardHTML(p, i) {
-    return `
-      <div class="post-card" onclick="openArticle('${p.id}')">
-        <div class="post-card-left">
-          <div>
-            <div class="post-card-meta">
-              <span class="post-tag">${p.tag || 'Essay'}</span>
-              <span class="post-date">${formatDate(p.date)}</span>
-            </div>
-            <h2 class="post-title">${p.title}</h2>
-            <p class="post-excerpt">${p.excerpt || p.content.substring(0, 180) + '...'}</p>
-          </div>
-          <div class="post-footer">
-            <span class="post-read-time">${readTime(p.content)}</span>
-            <span class="post-arrow">→</span>
-          </div>
+    return `<div class="post-card" onclick="openArticle('${p.id}')">
+      <div class="post-card-left">
+        <div>
+          <div class="post-card-meta"><span class="post-tag">${p.tag||'Essay'}</span><span class="post-date">${formatDate(p.date)}</span></div>
+          <h2 class="post-title">${p.title}</h2>
+          <p class="post-excerpt">${p.excerpt||p.content.substring(0,180)+'...'}</p>
         </div>
-        <div class="post-card-right">
-          ${p.image
-            ? `<img src="${p.image}" alt="${p.title}" onerror="this.style.display='none'" />`
-            : `<div class="post-img-placeholder">${(i % 3 === 0 ? '✦' : i % 3 === 1 ? '◈' : '◉')}</div>`
-          }
-        </div>
-      </div>`;
+        <div class="post-footer"><span class="post-read-time">${readTime(p.content)}</span><span class="post-arrow">→</span></div>
+      </div>
+      <div class="post-card-right">
+        ${p.image?`<img src="${p.image}" alt="${p.title}" onerror="this.style.display='none'" />`:`<div class="post-img-placeholder">${i%3===0?'✦':i%3===1?'◈':'◉'}</div>`}
+      </div>
+    </div>`;
   }
 
-  // ===== RENDER BLOG (3 posts on homepage) =====
   function renderBlog() {
     const posts = getPosts();
-    const container = document.getElementById('posts-container');
-    const countEl = document.getElementById('post-count');
-    const statEl = document.getElementById('stat-posts');
-    const total = posts.length + CLIENT_DIARY_POSTS.length;
-
-    countEl.textContent = posts.length;
-    statEl.textContent = total;
-
-    container.innerHTML = posts.slice(0, 3).map((p, i) => postCardHTML(p, i)).join('');
-
-    // Render diaries section (first 3)
-    const diariesContainer = document.getElementById('diaries-container');
-    diariesContainer.innerHTML = CLIENT_DIARY_POSTS.slice(0, 3).map((p, i) => postCardHTML(p, i)).join('');
+    document.getElementById('posts-container').innerHTML = posts.slice(0,3).map((p,i)=>postCardHTML(p,i)).join('');
+    document.getElementById('diaries-container').innerHTML = CLIENT_DIARY_POSTS.slice(0,3).map((p,i)=>postCardHTML(p,i)).join('');
+    document.getElementById('post-count').textContent = posts.length;
+    document.getElementById('stat-posts').textContent = posts.length + CLIENT_DIARY_POSTS.length;
   }
 
-  // ===== ARTICLE VIEW =====
   function openArticle(id) {
     const allPosts = [...getPosts(), ...CLIENT_DIARY_POSTS];
-    const post = allPosts.find(p => p.id === id);
+    const post = allPosts.find(p=>p.id===id);
     if (!post) return;
-    document.getElementById('art-tag').textContent = post.tag || 'Essay';
+    document.getElementById('art-tag').textContent = post.tag||'Essay';
     document.getElementById('art-title').textContent = post.title;
     document.getElementById('art-date').textContent = formatDate(post.date);
     document.getElementById('art-readtime').textContent = readTime(post.content);
     document.getElementById('art-content').textContent = post.content;
     document.getElementById('article-overlay').classList.add('open');
-    window.scrollTo(0, 0);
+    window.scrollTo(0,0);
   }
+  function closeArticle() { document.getElementById('article-overlay').classList.remove('open'); }
 
-  function closeArticle() {
-    document.getElementById('article-overlay').classList.remove('open');
-  }
-
-  // ===== INIT =====
-  document.addEventListener('DOMContentLoaded', () => {
-    renderBlog();
-  });
+  document.addEventListener('DOMContentLoaded', renderBlog);
 </script>
 </body>
 </html>
